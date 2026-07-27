@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+html,
+body{
+  margin:0;
+  padding:0;
+  background:#f5f7fa;
+  font-family:Inter,sans-serif;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+::selection{
+  background:#0B7A3E;
+  color:white;
+}
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#cbd5e1;
+  border-radius:999px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:#94a3b8;
+}
+
+.mantine-Paper-root{
+  border:1px solid #e5e7eb;
+}
+
+.mantine-Card-root{
+  transition:.3s;
+}
+
+.mantine-Card-root:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+
+.mantine-Button-root{
+  font-weight:600;
+}
+
+.mantine-TextInput-input,
+.mantine-Select-input{
+  height:44px;
+}
+
+.mantine-Badge-root{
+  font-weight:700;
+}
+
+.mantine-AppShell-main{
+  background:#f5f7fa;
+}
