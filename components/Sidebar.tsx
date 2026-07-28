@@ -22,21 +22,16 @@ import {
 export default function Sidebar() {
   return (
     <Box
-      className="md:sticky top-24"
-      sx={(theme) => ({
-        width: "100%",
-        maxWidth: 255,
-        marginLeft: "auto",
-        marginRight: "auto",
-        [theme.fn.smallerThan("md")]: {
-          maxWidth: "100%",
-          position: "static",
-          top: "auto",
-          marginLeft: 0,
-          marginRight: 0,
-          marginBottom: theme.spacing.xl,
-        },
-      })}
+      className="
+        w-full
+        max-w-[255px]
+        mx-auto
+        md:sticky
+        md:top-24
+        md:self-start
+        max-md:max-w-full
+        max-md:mb-6
+      "
     >
       <Paper
         p="xl"
@@ -46,31 +41,34 @@ export default function Sidebar() {
       >
         <Stack gap="lg">
 
-          <Title
-            order={3}
-            className="flex items-center gap-2"
-          >
+          {/* Header */}
+          <Group gap="sm">
             <IconFilter size={20} />
-            Filters
-          </Title>
+
+            <Title order={3}>
+              Filters
+            </Title>
+          </Group>
 
           <Divider />
 
+          {/* Product Number */}
           <div>
-
             <Text fw={600} mb={8}>
               Product Number
             </Text>
 
             <TextInput
               placeholder="Search part no..."
-              leftSection={<IconSearch size={16} />}
+              leftSection={
+                <IconSearch size={16} />
+              }
             />
-
           </div>
 
-          <div>
 
+          {/* Condition */}
+          <div>
             <Text fw={600} mb={8}>
               Condition
             </Text>
@@ -84,11 +82,11 @@ export default function Sidebar() {
               ]}
               defaultValue="All"
             />
-
           </div>
 
-          <div>
 
+          {/* Price */}
+          <div>
             <Text fw={600} mb={18}>
               Price Range
             </Text>
@@ -102,13 +100,20 @@ export default function Sidebar() {
               mt="sm"
               justify="space-between"
             >
-              <Text size="sm">$0</Text>
+              <Text size="sm">
+                $0
+              </Text>
 
-              <Text size="sm">$10,000+</Text>
+              <Text size="sm">
+                $10,000+
+              </Text>
+
             </Group>
 
           </div>
 
+
+          {/* Reset */}
           <Button
             fullWidth
             variant="light"
