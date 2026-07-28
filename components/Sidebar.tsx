@@ -22,8 +22,21 @@ import {
 export default function Sidebar() {
   return (
     <Box
-      className="sticky top-24"
-      w={255}
+      className="md:sticky top-24"
+      sx={(theme) => ({
+        width: "100%",
+        maxWidth: 255,
+        marginLeft: "auto",
+        marginRight: "auto",
+        [theme.fn.smallerThan("md")]: {
+          maxWidth: "100%",
+          position: "static",
+          top: "auto",
+          marginLeft: 0,
+          marginRight: 0,
+          marginBottom: theme.spacing.xl,
+        },
+      })}
     >
       <Paper
         p="xl"
