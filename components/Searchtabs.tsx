@@ -3,7 +3,6 @@
 import {
   Group,
   Paper,
-  Stack,
   Text,
   UnstyledButton,
 } from "@mantine/core";
