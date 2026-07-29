@@ -44,7 +44,8 @@ export default function AddPage() {
       <Container size="sm" py="xl">
 
         <Breadcrumbs mb="lg">
-          <Anchor href="/">Home</Anchor>
+        <Anchor href="/">Home</Anchor>
+          <Anchor href="/catalog">Catalog</Anchor>
           <Anchor c="green">Add Product</Anchor>
         </Breadcrumbs>
 

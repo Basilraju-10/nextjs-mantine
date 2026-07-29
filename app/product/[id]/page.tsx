@@ -105,7 +105,7 @@ export default async function ProductDetails({ params }: Props) {
 
                   <Button
                     component="a"
-                    href="/"
+                    href="/catalog"
                     variant="outline"
                     color="green"
                   >

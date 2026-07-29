@@ -6,7 +6,7 @@ body{
   margin:0;
   padding:0;
   background:#f5f7fa;
-  font-family:Inter,sans-serif;
+  font-family: var(--font-plus-jakarta), sans-serif;
 }
 
 *{

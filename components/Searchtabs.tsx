@@ -70,7 +70,7 @@ export default function SearchTabs({
                   color={active ? "#0B7A3E" : "#868E96"}
                   fill={active ? "#0B7A3E" : "transparent"}
                 />
-
+ 
                 <ActiveIcon
                   size={17}
                   color={active ? "#0B7A3E" : "#495057"}
