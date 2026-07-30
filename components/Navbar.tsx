@@ -22,6 +22,7 @@ import {
   IconPlus,
   IconShoppingCart,
 } from "@tabler/icons-react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [opened, setOpened] = useState(false);
@@ -52,9 +53,27 @@ export default function Navbar() {
                 align="center"
                 wrap="nowrap"
               >
-                <Text fw={500} size="sm">
-                  Who We Are
-                </Text>
+               
+<Link
+  href="/whoweare"
+  style={{ textDecoration: "none" }}
+>
+  <Text
+    fw={500}
+    size="sm"
+    styles={{
+      root: {
+        transition: "color 0.2s ease",
+
+        "&:hover": {
+          color: "#2dab56",
+        },
+      },
+    }}
+  >
+    Who We Are
+  </Text>
+</Link>
 
                 <Menu trigger="hover" shadow="md" width={180}>
                   <Menu.Target>
@@ -71,9 +90,15 @@ export default function Navbar() {
                   </Menu.Target>
 
                   <Menu.Dropdown>
-                    <Menu.Item>Repair</Menu.Item>
-                    <Menu.Item>Maintenance</Menu.Item>
-                    <Menu.Item>Support</Menu.Item>
+                     <Menu.Item component={Link} href="/services/repair">
+    Repair
+  </Menu.Item>
+                    <Menu.Item component={Link} href="/services/maintenance">
+    Maintenance
+  </Menu.Item>
+                    <Menu.Item component={Link} href="/services/support">
+    Support
+  </Menu.Item>
                   </Menu.Dropdown>
                 </Menu>
 
