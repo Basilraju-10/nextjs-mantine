@@ -102,10 +102,26 @@ export default function Navbar() {
                   </Menu.Dropdown>
                 </Menu>
 
-                <Text fw={500} size="sm">
-                  Quality
-                </Text>
+               <Link
+  href="/quality"
+  style={{ textDecoration: "none" }}
+>
+  <Text
+    fw={500}
+    size="sm"
+    styles={{
+      root: {
+        transition: "color 0.2s ease",
 
+        "&:hover": {
+          color: "#2dab56",
+        },
+      },
+    }}
+  >
+    Quality
+  </Text>
+</Link>
                 <Text fw={500} size="sm">
                   Events
                 </Text>
