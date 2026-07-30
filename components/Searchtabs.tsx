@@ -56,24 +56,41 @@ export default function SearchTabs({
               radius="md"
               px="xl"
               py="md"
-              shadow={active ? "md" : undefined}
-              withBorder={active}
               bg={active ? "white" : "transparent"}
+              shadow={active ? "md" : undefined}
               style={{
-                transition: "0.2s",
-                minWidth: 180,
+                minWidth: 210,
+                transition: "all 0.2s ease",
+                border: active
+                  ? "1px solid var(--mantine-color-gray-3)"
+                  : "none",
+                boxShadow: active
+                  ? undefined
+                  : "none",
               }}
             >
-              <Group gap={10} justify="center" wrap="nowrap">
+              <Group
+                gap={10}
+                justify="center"
+                wrap="nowrap"
+              >
                 <IconCircle
                   size={16}
-                  color={active ? "#0B7A3E" : "#868E96"}
-                  fill={active ? "#0B7A3E" : "transparent"}
+                  color={
+                    active ? "#0B7A3E" : "#868E96"
+                  }
+                  fill={
+                    active
+                      ? "#0B7A3E"
+                      : "transparent"
+                  }
                 />
- 
+
                 <ActiveIcon
                   size={17}
-                  color={active ? "#0B7A3E" : "#495057"}
+                  color={
+                    active ? "#0B7A3E" : "#495057"
+                  }
                 />
 
                 <Text
