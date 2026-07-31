@@ -48,7 +48,7 @@ export default function AboutSection() {
                 order={2}
                 style={{
                   color: "#006B4F",
-                  fontSize: 54,
+                  fontSize: 32,
                   fontWeight: 400,
                   lineHeight: 1.15,
                 }}
@@ -61,13 +61,12 @@ export default function AboutSection() {
               </Title>
 
               <Text
-                c="dimmed"
-                size="lg"
+                size="sm"
                 style={{
                   lineHeight: 1.9,
                 }}
               >
-                When time is of the essence, this GFA program saves the day.
+                When time is of the essence, this <Text component="span" c="#006B4F">GFA program saves the day.</Text> 
                 Lets say you have the component you need, but it requires a
                 repair you dont have time to make. No problem. Exchange it
                 with one of ours. Chances are, we have several in our vast
@@ -81,9 +80,12 @@ export default function AboutSection() {
                 mt={20}
               >
                 <Box w={220}>
-                  <Title order={2} c="#00A651">
+                  <Text
+                    fz={25}
+                    fw={500} 
+                    c="#006B4F">
                     3 Mn+
-                  </Title>
+                  </Text>
 
                   <Text c="dimmed">
                     Aircraft Parts Delivered
@@ -91,9 +93,12 @@ export default function AboutSection() {
                 </Box>
 
                 <Box w={220}>
-                  <Title order={2} c="#00A651">
+                  <Text
+                    fz={25}
+                    fw={500} 
+                    c="#006B4F">
                     500+
-                  </Title>
+                  </Text>
 
                   <Text c="dimmed">
                     Aircraft Spares Vendors
@@ -101,9 +106,12 @@ export default function AboutSection() {
                 </Box>
 
                 <Box w={220}>
-                  <Title order={2} c="#00A651">
+                  <Text
+                    fz={25}
+                    fw={500} 
+                    c="#006B4F">
                     250+
-                  </Title>
+                  </Text>
 
                   <Text c="dimmed">
                     Airline Customers
@@ -111,9 +119,12 @@ export default function AboutSection() {
                 </Box>
 
                 <Box w={220}>
-                  <Title order={2} c="#00A651">
+                 <Text
+                    fz={25}
+                    fw={500} 
+                    c="#006B4F">
                     50+
-                  </Title>
+                  </Text    >
 
                   <Text c="dimmed">
                     Repair Stations
