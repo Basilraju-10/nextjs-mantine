@@ -61,6 +61,15 @@ img{
   transform: none !important;
   box-shadow: var(--mantine-shadow-sm) !important;
 }
+/* Only LatestNews cards */
+.latest-news-card {
+  transition: none !important;
+}
+
+.latest-news-card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
 
 .mantine-Button-root{
   font-weight:600;

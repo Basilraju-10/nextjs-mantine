@@ -90,12 +90,13 @@ export default function Navbar() {
                   </Menu.Target>
 
                   <Menu.Dropdown>
+                                       <Menu.Item component={Link} href="/services/exchange">
+    Exchange
+  </Menu.Item>
                      <Menu.Item component={Link} href="/services/repair">
     Repair
   </Menu.Item>
-                    <Menu.Item component={Link} href="/services/maintenance">
-    Maintenance
-  </Menu.Item>
+ 
                     <Menu.Item component={Link} href="/services/support">
     Support
   </Menu.Item>
