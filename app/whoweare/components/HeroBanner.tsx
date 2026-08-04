@@ -62,7 +62,7 @@ export default function HeroBanner() {
           <Title
             order={1}
             style={{
-              fontSize: 62,
+              fontSize: 45,
               lineHeight: 1.05,
               fontWeight: 800,
             }}
