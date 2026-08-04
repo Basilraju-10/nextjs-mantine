@@ -8,35 +8,35 @@ import {
   SimpleGrid,
   Stack,
   Text,
-  ThemeIcon,
   Title,
 } from "@mantine/core";
 
 import {
-  IconArrowsExchange,
-  IconClipboardText,
-  IconCpu,
 } from "@tabler/icons-react";
 
 const services = [
   {
-    icon: IconArrowsExchange,
-    title: "Instant Availability",
+    title: "Exchange basics: a beginners guide",
     description:
-      "With the availability of inventory from our exchange pool, you can easily have your aircraft back in the air as soon as possible. We also make your often-replaced aircraft parts backed by an actively managed rotable pool.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
+    text: "Press Release",
+    date:"24-05-2026",
+
   },
   {
-    icon: IconClipboardText,
-    title: "MRO Support",
+    title: "Flat rate vs exchange plus cost: what's best?",
     description:
-      "You will get extensive MRO support for a broad range of rotable components. We help you minimize repair expenses by adopting rotables and exchange solutions instead of purchasing new aircraft parts.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
+    text: "Press Release",
+    date:"24-05-2026",
   },
   {
-    icon: IconCpu,
-    title: "Robust Service Levels",
+    title: "Optimizing aircraft exchange workflows",
     description:
-      "Our service reduces inventory carrying expenses and manages your repair costs with the option of a flat rate exchange. Our supplier quality management and specialized repair and exchange solutions are at the top.",
-  },
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
+    text: "Press Release",
+    date:"24-05-2026",
+  }
 ];
 
 export default function LatestNews() {
@@ -65,7 +65,6 @@ export default function LatestNews() {
 
         <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="xl">
           {services.map((service) => {
-            const Icon = service.icon;
 
             return (
               <Card
@@ -83,15 +82,6 @@ export default function LatestNews() {
                   border: "none",
                 }}
 >
-                <ThemeIcon
-                  variant="transparent"
-                  color="green"
-                  size={40}
-                  mb="lg"
-                >
-                  <Icon size={28} />
-                </ThemeIcon>
-
                 <Title order={3} mb="md" size="md" c="#00552F">
                   {service.title}
                 </Title>
@@ -103,6 +93,21 @@ export default function LatestNews() {
                 >
                   {service.description}
                 </Text>
+                <br />
+                <Text
+                  c="#00552F"
+                  size="sm"
+                  style={{ lineHeight: 1.8 }}
+                >
+                  {service.text}
+                </Text>
+                <Text
+                  c="dimmed"
+                  size="sm"
+                  style={{ lineHeight: 1.8 }}
+                >
+                  {service.date}
+                </Text> 
               </Card>
               
             );
