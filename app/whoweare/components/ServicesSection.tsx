@@ -105,7 +105,8 @@ export default function ServicesSection() {
 
           return (
             <Card
-              key={service.title}
+                key={service.title}
+                className="service-card"
               radius="md"
               shadow="sm"
               padding="xl"
