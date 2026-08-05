@@ -6,7 +6,7 @@ import {
   Title,
 } from "@mantine/core";
 
-export default function Banner() {
+export default function QualityBanner() {
   return (
     <Box
       style={{
@@ -21,7 +21,7 @@ export default function Banner() {
         style={{
           position: "absolute",
           inset: 0,
-          backgroundImage: "url('/images/exchange/exchange_banner.png')",
+          backgroundImage: "url('/images/quality/quality_banner.png')",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "right center",
           backgroundSize: "46% auto",
@@ -56,24 +56,24 @@ export default function Banner() {
             size="sm"
             style={{ letterSpacing: 2 }}
           >
-            OUR SERVICE
+            QUALITY
           </Text>
 
           <Title
             order={1}
             style={{
-              fontSize: 50,
+              fontSize: 45,
               lineHeight: 1.05,
-              fontWeight: 600,
+              fontWeight: 800,
             }}
           >
-
+            Attention to {" "}
             <Text
               component="span"
               inherit
-              c="#0C823C"
+              c="#00C46A"
             >
-              Exchange
+              Detail
             </Text>
           </Title>
         </Stack>

@@ -22,7 +22,7 @@ import {
 export default function Footer1() {
   return (
     <Box bg="#006B2E" c="white" py={70}>
-      <Container size="xl">
+      <Container size="lg">
         <Flex
           justify="space-between"
           align="flex-start"

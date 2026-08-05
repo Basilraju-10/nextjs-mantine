@@ -76,7 +76,7 @@ const services = [
 export default function ServicesSection() {
   return (
     < Box bg="white" py={100}>
-      <Container size="xl" py={100}>
+      <Container size="lg" py={100}>
         {/* Heading */}
         <Stack align="center" gap={8} mb={60}>
           <Title

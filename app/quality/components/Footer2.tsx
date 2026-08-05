@@ -19,7 +19,7 @@ import {
   IconBrandLinkedin,
 } from "@tabler/icons-react";
 
-export default function Footer() {
+export default function Footer2() {
   return (
     <Box bg="#006B2E" c="white" py={70}>
       <Container size="lg">

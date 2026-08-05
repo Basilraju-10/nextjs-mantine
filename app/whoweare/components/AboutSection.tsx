@@ -43,11 +43,11 @@ export default function AboutSection() {
       >
         <Flex justify="flex-end">
           <Box maw={560}>
-            <Stack gap={28}>
+            <Stack gap={28}>   
               <Title
-                order={2}
+                order={2}           
                 style={{
-                  color: "#006B4F",
+                  color: "#0C823C",
                   fontSize: 32,
                   fontWeight: 400,
                   lineHeight: 1.15,
@@ -66,7 +66,7 @@ export default function AboutSection() {
                   lineHeight: 1.9,
                 }}
               >
-                When time is of the essence, this <Text component="span" c="#006B4F">GFA program saves the day.</Text> 
+                When time is of the essence, this <Text component="span" c="#0C823C">GFA program saves the day.</Text> 
                 Lets say you have the component you need, but it requires a
                 repair you dont have time to make. No problem. Exchange it
                 with one of ours. Chances are, we have several in our vast
@@ -83,7 +83,7 @@ export default function AboutSection() {
                   <Text
                     fz={25}
                     fw={500} 
-                    c="#006B4F">
+                    c="#0C823C">
                     3 Mn+
                   </Text>
 
@@ -96,7 +96,7 @@ export default function AboutSection() {
                   <Text
                     fz={25}
                     fw={500} 
-                    c="#006B4F">
+                    c="#0C823C">
                     500+
                   </Text>
 
@@ -109,7 +109,7 @@ export default function AboutSection() {
                   <Text
                     fz={25}
                     fw={500} 
-                    c="#006B4F">
+                    c="#0C823C">
                     250+
                   </Text>
 
@@ -122,7 +122,7 @@ export default function AboutSection() {
                  <Text
                     fz={25}
                     fw={500} 
-                    c="#006B4F">
+                    c="#0C823C">
                     50+
                   </Text    >
 

@@ -88,3 +88,8 @@ img {
 .mantine-AppShell-main {
   background: #f5f7fa;
 }
+.certificate-card,
+.certificate-card:hover {
+  transform: none !important;
+  transition: none !important;
+}
