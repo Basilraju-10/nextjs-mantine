@@ -70,7 +70,7 @@ export default function FAQSection() {
                 py={22}
                 styles={{
                   label: {
-                    color: "#006B4F",
+                    color: "#0C823C",
                     fontSize: 16,
                     fontWeight: 500,
                   },
