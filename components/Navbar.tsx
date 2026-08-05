@@ -146,8 +146,8 @@ export default function Navbar() {
                     <Menu.Item component={Link} href="/more/about">
                       About
                     </Menu.Item>
-                    <Menu.Item component={Link} href="/careers">
-                      Career
+                    <Menu.Item component={Link} href="/more/quality">
+                      Quality
                     </Menu.Item>
                     <Menu.Item component={Link} href="/contact">
                       Contact
