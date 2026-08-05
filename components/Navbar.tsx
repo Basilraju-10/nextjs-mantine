@@ -143,14 +143,14 @@ export default function Navbar() {
                   </Menu.Target>
 
                   <Menu.Dropdown>
-                    <Menu.Item component={Link} href="/more/about">
+                    <Menu.Item component={Link} href="/about">
                       About
                     </Menu.Item>
-                    <Menu.Item component={Link} href="/more/quality">
+                    <Menu.Item component={Link} href="/quality">
                       Quality
                     </Menu.Item>
-                    <Menu.Item component={Link} href="/contact">
-                      Contact
+                    <Menu.Item component={Link} href="/careers">
+                      Careers
                     </Menu.Item>
                   </Menu.Dropdown>
                 </Menu>

@@ -6,7 +6,7 @@ import {
   Title,
 } from "@mantine/core";
 
-export default function QualityBanner() {
+export default function CareerBanner() {
   return (
     <Box
       style={{
@@ -21,7 +21,7 @@ export default function QualityBanner() {
         style={{
           position: "absolute",
           inset: 0,
-          backgroundImage: "url('/images/quality/quality_banner.png')",
+          backgroundImage: "url('/images/career_banner.png')",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "right center",
           backgroundSize: "46% auto",
@@ -56,7 +56,7 @@ export default function QualityBanner() {
             size="sm"
             style={{ letterSpacing: 2 }}
           >
-            QUALITY
+            CAREERS
           </Text>
 
           <Title
@@ -67,13 +67,13 @@ export default function QualityBanner() {
               fontWeight: 800,
             }}
           >
-            Attention to {" "}
+            Work with {" "}
             <Text
               component="span"
               inherit
               c="#00C46A"
             >
-              Detail
+              Us
             </Text>
           </Title>
         </Stack>
