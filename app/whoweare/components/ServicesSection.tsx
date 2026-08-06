@@ -83,7 +83,7 @@ export default function ServicesSection() {
             order={1}
           ta="center"
           style={{
-            fontSize: 52,
+            fontSize: 36,
             fontWeight: 700,
           }}
         >

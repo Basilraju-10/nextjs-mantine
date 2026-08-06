@@ -1,24 +1,12 @@
-import Layout from "@/components/Layout";
-import HeroBanner from "./components/HeroBanner";
-import AboutSection from "./components/AboutSection";
-import OurValues from "./components/OurValues";
-import OurStory from "./components/OurStory";
-import LeadershipTeam from "./components/LeadershipTeam";
-import ServicesSection from "./components/ServicesSection";
-import Footer from "./components/Footer";
+
+import WhoWeArePage from "../whoweare/page";
 
 
 
-export default function WhoWeArePage() {
+
+export default function about() {
   return (
-    <Layout>
-      <HeroBanner/>
-      <AboutSection/>
-      <OurValues/>
-      <OurStory/>
-      <LeadershipTeam/>
-      <ServicesSection/>
-      <Footer/>
-    </Layout>
+  
+      <WhoWeArePage/>
   );
 }

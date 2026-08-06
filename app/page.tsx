@@ -3,6 +3,8 @@
 import FeaturedProducts from "@/components/home/FeaturedProducts";
 import Layout from "@/components/Layout";
 import SearchLanding from "@/components/SearchLanding";
+import ServicesSection from "./whoweare/components/ServicesSection";
+import Footer from "./whoweare/components/Footer";
 
 export default function HomePage() {
   return (
@@ -10,6 +12,8 @@ export default function HomePage() {
       <SearchLanding />
 
       <FeaturedProducts/>
+       <ServicesSection/>
+       <Footer/>
     </Layout>
   );
 }
