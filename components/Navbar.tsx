@@ -133,11 +133,15 @@ export default function Navbar() {
                   </Text>
                 </Link>
 
-
-                <Text fw={500} size="sm">
+                <Link
+                  href="/events"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Text
+                  size="sm">
                   Events
                 </Text>
-
+                </Link>
 
                 <Menu trigger="hover" shadow="md" width={180}>
                   <Menu.Target>

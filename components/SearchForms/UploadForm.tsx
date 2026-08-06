@@ -119,7 +119,7 @@ export default function UploadForm() {
       <Button
         mt="xl"
         size="lg"
-        radius="md"
+        radius="lg"
         color="green"
         fullWidth
         leftSection={<IconSearch size={20} />}

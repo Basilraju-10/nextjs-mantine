@@ -107,7 +107,7 @@ export default function PasteForm() {
       <Button
         mt="xl"
         size="lg"
-        radius="md"
+        radius="lg"
         color="green"
         fullWidth
         leftSection={<IconSearch size={20} />}
