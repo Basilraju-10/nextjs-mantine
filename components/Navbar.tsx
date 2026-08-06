@@ -22,6 +22,7 @@ import {
   IconPlus,
   IconShoppingCart,
 } from "@tabler/icons-react";
+
 import Link from "next/link";
 
 export default function Navbar() {
@@ -30,15 +31,18 @@ export default function Navbar() {
   return (
     <>
       <header className="sticky top-0 z-50 h-20 bg-white border-b border-gray-200 shadow-sm">
-        <Container size="xl" className="h-full">
+        <Container fluid className="h-full">
           <Group
             h="100%"
+            w="100%"
             justify="space-between"
             align="center"
             wrap="nowrap"
           >
+
             {/* Left */}
-            <Group gap={40} align="center" wrap="nowrap">
+            <Group gap="lg" align="center" wrap="nowrap">
+
               <Image
                 src="https://gfa.aero/theme_golden_aviation/static/src/image%203.0/logo.svg"
                 alt="GFA Logo"
@@ -48,32 +52,32 @@ export default function Navbar() {
               />
 
               <Group
-                gap={30}
+                gap="lg"
                 visibleFrom="md"
                 align="center"
                 wrap="nowrap"
               >
-               
-<Link
-  href="/whoweare"
-  style={{ textDecoration: "none" }}
->
-  <Text
-    fw={500}
-    size="sm"
-    styles={{
-      root: {
-        transition: "color 0.2s ease",
 
-        "&:hover": {
-          color: "#2dab56",
-        },
-      },
-    }}
-  >
-    Who We Are
-  </Text>
-</Link>
+                <Link
+                  href="/whoweare"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Text
+                    fw={500}
+                    size="sm"
+                    styles={{
+                      root: {
+                        transition: "color 0.2s ease",
+                        "&:hover": {
+                          color: "#2dab56",
+                        },
+                      },
+                    }}
+                  >
+                    Who We Are
+                  </Text>
+                </Link>
+
 
                 <Menu trigger="hover" shadow="md" width={180}>
                   <Menu.Target>
@@ -85,77 +89,98 @@ export default function Navbar() {
                       <Text fw={500} size="sm">
                         Services
                       </Text>
+
                       <IconChevronDown size={15} />
                     </Group>
                   </Menu.Target>
 
+
                   <Menu.Dropdown>
-                                       <Menu.Item component={Link} href="/services/exchange">
-    Exchange
-  </Menu.Item>
-                     <Menu.Item component={Link} href="/services/repair">
-    Repair
-  </Menu.Item>
- 
+
+                    <Menu.Item component={Link} href="/services/exchange">
+                      Exchange
+                    </Menu.Item>
+
+                    <Menu.Item component={Link} href="/services/repair">
+                      Repair
+                    </Menu.Item>
+
                     <Menu.Item component={Link} href="/services/support">
-    Support
-  </Menu.Item>
+                      Support
+                    </Menu.Item>
+
                   </Menu.Dropdown>
                 </Menu>
 
-               <Link
-  href="/quality"
-  style={{ textDecoration: "none" }}
->
-  <Text
-    fw={500}
-    size="sm"
-    styles={{
-      root: {
-        transition: "color 0.2s ease",
 
-        "&:hover": {
-          color: "#2dab56",
-        },
-      },
-    }}
-  >
-    Quality
-  </Text>
-</Link>
+                <Link
+                  href="/quality"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Text
+                    fw={500}
+                    size="sm"
+                    styles={{
+                      root: {
+                        transition: "color 0.2s ease",
+                        "&:hover": {
+                          color: "#2dab56",
+                        },
+                      },
+                    }}
+                  >
+                    Quality
+                  </Text>
+                </Link>
+
+
                 <Text fw={500} size="sm">
                   Events
                 </Text>
 
+
                 <Menu trigger="hover" shadow="md" width={180}>
                   <Menu.Target>
+
                     <Group
                       gap={4}
                       align="center"
                       style={{ cursor: "pointer" }}
                     >
+
                       <IconPlus size={14} color="#0B7A3E" />
 
                       <Text fw={500} size="sm">
                         More
                       </Text>
+
                     </Group>
+
                   </Menu.Target>
 
+
                   <Menu.Dropdown>
+
                     <Menu.Item component={Link} href="/about">
                       About
                     </Menu.Item>
+
                     <Menu.Item component={Link} href="/quality">
                       Quality
                     </Menu.Item>
+
                     <Menu.Item component={Link} href="/careers">
                       Careers
                     </Menu.Item>
+
                   </Menu.Dropdown>
+
                 </Menu>
+
               </Group>
+
             </Group>
+
 
             {/* Right */}
 
@@ -165,6 +190,7 @@ export default function Navbar() {
               align="center"
               wrap="nowrap"
             >
+
               <ActionIcon
                 color="green"
                 variant="filled"
@@ -173,6 +199,7 @@ export default function Navbar() {
               >
                 <IconBrandLinkedin size={16} />
               </ActionIcon>
+
 
               <ActionIcon
                 color="green"
@@ -183,9 +210,11 @@ export default function Navbar() {
                 <IconPhone size={16} />
               </ActionIcon>
 
+
               <Text fw={500} size="sm">
                 AOG Desk
               </Text>
+
 
               <ActionIcon
                 variant="subtle"
@@ -195,7 +224,9 @@ export default function Navbar() {
                 <IconShoppingCart size={20} />
               </ActionIcon>
 
+
               <Group gap={6} align="center">
+
                 <ActionIcon
                   color="green"
                   variant="filled"
@@ -205,20 +236,28 @@ export default function Navbar() {
                   <IconDownload size={15} />
                 </ActionIcon>
 
+
                 <Text fw={700} size="sm">
                   GFA Login
                 </Text>
+
               </Group>
+
             </Group>
+
+
+            {/* Mobile Menu */}
 
             <Burger
               hiddenFrom="md"
               opened={opened}
               onClick={() => setOpened(!opened)}
             />
+
           </Group>
         </Container>
       </header>
+
 
       <Drawer
         opened={opened}
@@ -226,6 +265,7 @@ export default function Navbar() {
         title="Menu"
         padding="md"
       >
+
         <Stack gap="lg">
           <Text>Who We Are</Text>
           <Text>Services</Text>
@@ -235,6 +275,7 @@ export default function Navbar() {
           <Text>AOG Desk</Text>
           <Text>GFA Login</Text>
         </Stack>
+
       </Drawer>
     </>
   );

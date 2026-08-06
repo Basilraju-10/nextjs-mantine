@@ -12,10 +12,15 @@ import {
   Paper,
   Select,
   Stack,
+  Text,
   TextInput,
   Title,
 } from "@mantine/core";
+
 import { addProduct } from "@/lib/api";
+
+import Layout from "@/components/Layout";
+import Footer from "@/app/whoweare/components/Footer";
 
 export default function AddProduct() {
   const router = useRouter();
@@ -34,30 +39,59 @@ export default function AddProduct() {
 
     alert("Product Added Successfully");
 
-    router.push("/");
+    router.push("/catalog");
   }
 
   return (
-    <Container size="sm" py="xl">
+    <Layout>
 
-      <Breadcrumbs mb="lg">
-        <Anchor href="/">Home</Anchor>
-        <Anchor href="/catalog">Catalog</Anchor>
-        <Anchor c="green">Add Product</Anchor>
-      </Breadcrumbs>
+      <Container size="sm" py="xl">
 
-      <Paper
-        p="xl"
-        radius="md"
-        shadow="xs"
-        withBorder
-      >
-        <Title order={2} mb="xl">
-          Add Product
-        </Title>
+        {/* Breadcrumbs */}
+        <Breadcrumbs mb="lg">
 
-        <form onSubmit={handleSubmit}>
-          <Stack>
+          <Anchor
+            href="/"
+            c="dimmed"
+          >
+            Home
+          </Anchor>
+
+          <Anchor
+            href="/catalog"
+            c="dimmed"
+          >
+            Catalog
+          </Anchor>
+
+          <Text
+            c="bold"
+            fw={500}
+          >
+            Add Product
+          </Text>
+
+        </Breadcrumbs>
+
+
+        <Paper
+          p="xl"
+          radius="md"
+          shadow="xs"
+          withBorder
+        >
+
+          <Title
+            order={2}
+            mb="xl"
+          >
+            Add Product
+          </Title>
+
+
+          <form onSubmit={handleSubmit}>
+
+            <Stack>
 
               <TextInput
                 label="Product Title"
@@ -70,6 +104,7 @@ export default function AddProduct() {
                 }
               />
 
+
               <NumberInput
                 label="Price"
                 value={form.price}
@@ -80,6 +115,7 @@ export default function AddProduct() {
                   })
                 }
               />
+
 
               <Select
                 label="Category"
@@ -98,6 +134,7 @@ export default function AddProduct() {
                 }
               />
 
+
               <TextInput
                 label="Image URL"
                 value={form.image}
@@ -109,6 +146,7 @@ export default function AddProduct() {
                 }
               />
 
+
               <Button
                 type="submit"
                 color="green"
@@ -116,11 +154,18 @@ export default function AddProduct() {
                 Add Product
               </Button>
 
+
             </Stack>
+
           </form>
 
         </Paper>
 
       </Container>
+
+
+      <Footer />
+
+    </Layout>
   );
 }

@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 
 import {
+  Anchor,
   Badge,
   Breadcrumbs,
   Button,
@@ -14,11 +15,11 @@ import {
   Stack,
   Text,
   Title,
-  Anchor,
 } from "@mantine/core";
 
 import Layout from "@/components/Layout";
 import { getProduct } from "@/lib/api";
+import Footer from "@/app/whoweare/components/Footer";
 
 interface Props {
   params: Promise<{
@@ -38,17 +39,31 @@ export default async function ProductDetails({ params }: Props) {
   return (
     <Layout>
       <Container size="xl" py="xl">
+
+        {/* Breadcrumbs */}
         <Breadcrumbs mb="lg">
-          <Anchor href="/">
+          <Anchor
+            href="/"
+            c="dimmed"
+          >
             Home
           </Anchor>
 
-          <Anchor href="/">
+          <Anchor
+            href="/catalog"
+            c="dimmed"
+          >
             Catalog
           </Anchor>
 
-          <Text c="green">Product</Text>
+          <Text
+            c="bold"
+            fw={500}
+          >
+            Product
+          </Text>
         </Breadcrumbs>
+
 
         <Paper
           p="xl"
@@ -56,7 +71,10 @@ export default async function ProductDetails({ params }: Props) {
           withBorder
           shadow="xs"
         >
+
           <Grid>
+
+            {/* Product Image */}
             <GridCol span={{ base: 12, md: 5 }}>
               <Image
                 src={product.image}
@@ -66,8 +84,11 @@ export default async function ProductDetails({ params }: Props) {
               />
             </GridCol>
 
+
+            {/* Product Details */}
             <GridCol span={{ base: 12, md: 7 }}>
               <Stack>
+
                 <Group>
                   <Badge color="green">
                     IN STOCK
@@ -78,30 +99,39 @@ export default async function ProductDetails({ params }: Props) {
                   </Badge>
                 </Group>
 
+
                 <Title order={2}>
                   {product.title}
                 </Title>
+
 
                 <Text c="dimmed">
                   {product.category}
                 </Text>
 
+
                 <Divider />
+
 
                 <Title c="green">
                   ${product.price}
                 </Title>
 
+
                 <Text>
                   {product.description}
                 </Text>
 
+
                 <Divider />
 
+
                 <Group>
+
                   <Button color="green">
                     Add To Cart
                   </Button>
+
 
                   <Button
                     component="a"
@@ -111,12 +141,19 @@ export default async function ProductDetails({ params }: Props) {
                   >
                     Back
                   </Button>
+
                 </Group>
+
               </Stack>
             </GridCol>
+
           </Grid>
+
         </Paper>
+
       </Container>
+
+      <Footer />
     </Layout>
   );
 }

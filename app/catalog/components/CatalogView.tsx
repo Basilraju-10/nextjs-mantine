@@ -12,8 +12,10 @@ import {
   Text,
   Title,
 } from "@mantine/core";
+
 import { getProducts } from "@/lib/api";
 import { Product } from "@/types/product";
+
 import ProductListCard from "@/components/ProductListCard";
 import ProductCard from "@/components/ProductCard";
 import SearchBar from "@/components/SearchBar";
@@ -36,96 +38,104 @@ export default function CatalogView() {
     fetchProducts();
   }, []);
 
- const breadcrumbs = [
-  { title: "Home", href: "/" },
-  { title: "Catalog", href: "/catalog" },
-];
- return (
-      <Container size="xl" py="xl">
 
-        {/* Breadcrumb */}
+  return (
+    <Container size="xl" py="xl">
 
-        <Breadcrumbs mb="sm">
-          {breadcrumbs.map((item) => (
-            <Anchor
-              key={item.title}
-              href={item.href}
-              underline="never"
-              c={item.title === "Catalog" ? "green" : "dimmed"}
-              fw={500}
-            >
-              {item.title}
-            </Anchor>
-          ))}
-        </Breadcrumbs>
+      {/* Breadcrumb */}
 
-        {/* Heading */}
+      <Breadcrumbs mb="lg">
 
-        <Stack gap={2} mb={30}>
-          <Title
-            fw={700}
-            style={{ fontSize: 42 }}
-          >
-            Parts Catalog
-          </Title>
+        <Anchor
+          href="/"
+          c="dimmed"
+        >
+          Home
+        </Anchor>
 
-          <Text c="dimmed" size="md">
-            Search thousands of available aircraft parts from our inventory.
-          </Text>
-        </Stack>
+        <Text
+          c="bold"
+          fw={500}
+        >
+          Catalog
+        </Text>
 
-        {/* Main Layout */}
+      </Breadcrumbs>
 
-        <Grid gap={24}>
 
-          {/* Sidebar */}
+      {/* Heading */}
 
-          <GridCol span={{ base: 12, md: 3 }}>
-            <Sidebar />
-          </GridCol>
+      <Stack gap={2} mb={30}>
 
-          {/* Products */}
+        <Title
+          fw={700}
+          style={{ fontSize: 42 }}
+        >
+          Parts Catalog
+        </Title>
 
-          <GridCol span={{ base: 12, md: 9 }}>
 
-            <SearchBar
-              totalProducts={products.length}
-              view={view}
-              setView={setView}
-            />
+        <Text c="dimmed" size="md">
+          Search thousands of available aircraft parts from our inventory.
+        </Text>
 
-            {view === "grid" ? (
+      </Stack>
 
-              <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
 
-                {products.map((product) => (
-                  <ProductCard
-                    key={product.id}
-                    product={product}
-                  />
-                ))}
+      {/* Main Layout */}
 
-              </div>
+      <Grid gap={24}>
 
-            ) : (
+        {/* Sidebar */}
 
-              <Stack gap="md">
+        <GridCol span={{ base: 12, md: 3 }}>
+          <Sidebar />
+        </GridCol>
 
-                {products.map((product) => (
-                  <ProductListCard
-                    key={product.id}
-                    product={product}
-                  />
-                ))}
 
-              </Stack>
+        {/* Products */}
 
-            )}
+        <GridCol span={{ base: 12, md: 9 }}>
 
-          </GridCol>
+          <SearchBar
+            totalProducts={products.length}
+            view={view}
+            setView={setView}
+          />
 
-        </Grid>
 
-      </Container>
+          {view === "grid" ? (
+
+            <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+
+              {products.map((product) => (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                />
+              ))}
+
+            </div>
+
+          ) : (
+
+            <Stack gap="md">
+
+              {products.map((product) => (
+                <ProductListCard
+                  key={product.id}
+                  product={product}
+                />
+              ))}
+
+            </Stack>
+
+          )}
+
+        </GridCol>
+
+      </Grid>
+
+    </Container>
   );
 }
