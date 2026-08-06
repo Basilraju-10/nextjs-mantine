@@ -21,14 +21,14 @@ import Layout from "@/components/Layout";
 import { getProduct } from "@/lib/api";
 import Footer from "@/app/whoweare/components/Footer";
 
-interface Props {
-  params: Promise<{
+interface ProductPageProps {
+  params: {
     id: string;
-  }>;
+  };
 }
 
-export default async function ProductDetails({ params }: Props) {
-  const { id } = await params;
+export default async function ProductPage({ params }: ProductPageProps) {
+  const { id } = params;
 
   const product = await getProduct(id);
 

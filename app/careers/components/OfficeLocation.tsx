@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Container, Stack, Text, Title } from "@mantine/core";
+import { Box, Container, Image, Stack, Text, Title } from "@mantine/core";
 
 export default function OfficeLocation() {
   return (
@@ -46,7 +46,7 @@ export default function OfficeLocation() {
             justifyContent: "center",
           }}
         >
-          <img
+          <Image
             src="/images/globe-square.png"
             alt="World Map"
             style={{

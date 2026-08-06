@@ -33,6 +33,7 @@ export default function Footer() {
           <Box w={220}>
             <Image
               src="/images/gfa-logo-footer.svg"
+              alt="GFA logo"
               w={150}
               mb={40}
             />

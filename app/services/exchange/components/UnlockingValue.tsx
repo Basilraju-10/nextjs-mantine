@@ -70,12 +70,12 @@ export default function UnlockingValue() {
                     lineHeight: 1.2,
                   }}
                 >
-                 Unlocking Value and Flexibility with GFA's Exchange Options
+                 Unlocking Value and Flexibility with GFA&apos;s Exchange Options
                 </Title>
 
               </Flex>
                     <p>
-                    GFA boasts a vast inventory of rotables, catering to diverse customer needs. Our exchange options, such as "Flat Exchange" or "Exchange Plus Cost", provide attractive choices that guarantee value for money while meeting specific requirements.
+                    GFA boasts a vast inventory of rotables, catering to diverse customer needs. Our exchange options, such as &quot;Flat Exchange&quot; or &quot;Exchange Plus Cost&quot;, provide attractive choices that guarantee value for money while meeting specific requirements.
                     </p>
 
               {/* Stats */}
