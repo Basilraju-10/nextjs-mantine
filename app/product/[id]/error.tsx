@@ -13,7 +13,7 @@ export default function ProductError({ error }: { error: Error }) {
 
   return (
     <Center mih="100vh">
-      <Stack align="center" spacing="md">
+      <Stack align="center" gap="md">
         <Title order={2}>Unable to load product</Title>
         <Text color="dimmed">{error.message}</Text>
         <Button onClick={() => router.push("/catalog")}>Back to catalog</Button>

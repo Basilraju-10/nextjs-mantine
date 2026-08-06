@@ -13,7 +13,7 @@ export default function GlobalError({ error }: { error: Error }) {
 
   return (
     <Center mih="100vh">
-      <Stack align="center" spacing="md">
+      <Stack align="center" gap="md">
         <Title order={2}>Something went wrong</Title>
         <Text color="dimmed">{error.message}</Text>
         <Button onClick={() => router.refresh()}>Try again</Button>
