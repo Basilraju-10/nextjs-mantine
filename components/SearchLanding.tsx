@@ -22,17 +22,24 @@ export default function SearchLanding() {
   return (
     <Box
       style={{
-        minHeight: "100vh",
-        backgroundImage:
-          "url('/images/hero-home.webp')",
-        backgroundSize: "cover",
+        width: "100%",
+        minHeight: "430px",
+        backgroundImage: "url('/images/hero-home.webp')",
+        backgroundRepeat: "repeat-x",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
+        backgroundSize: "50% 100%",
       }}
     >
-      <Container size="lg" py={50}>
-        <Stack gap={40}>
+      <Container
+        size="lg"
+        py={60}
+        style={{
+          minHeight: 430,
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        <Stack gap={40} w="100%">
           {/* Heading */}
           <Stack gap={4} ta="center">
             <Title order={1} fw={700}>
@@ -50,9 +57,11 @@ export default function SearchLanding() {
             onChange={setSearchMode}
           />
 
-          {/* Forms */}
+          {/* Search Forms */}
           {searchMode === "upload" && <UploadForm />}
+
           {searchMode === "paste" && <PasteForm />}
+
           {searchMode === "mro" && <MROSearchForm />}
         </Stack>
       </Container>
