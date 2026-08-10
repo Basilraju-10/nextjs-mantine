@@ -67,8 +67,12 @@ export default function AddProduct() {
   return (
     <Container size="md" py="xl">
       <Breadcrumbs mb="xl">
-        <Anchor href="/">Home</Anchor>
-        <Anchor href="/catalog">Catalog</Anchor>
+        <Anchor href="/" c="dimmed">
+          Home
+        </Anchor>
+        <Anchor href="/catalog" c="dimmed">
+          Catalog
+        </Anchor>
         <Text>Add Product</Text>
       </Breadcrumbs>
 
