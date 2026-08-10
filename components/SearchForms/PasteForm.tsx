@@ -4,9 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 import {
-  Button,
   Grid,
-  Paper,
   Select,
   Stack,
   Text,
@@ -14,7 +12,7 @@ import {
   Title,
 } from "@mantine/core";
 
-import { IconSearch } from "@tabler/icons-react";
+import SearchFormLayout from "./SearchFormLayout";
 
 export default function PasteForm() {
   const router = useRouter();
@@ -28,93 +26,76 @@ export default function PasteForm() {
   }
 
   return (
-    <>
-      <Paper
-        withBorder
-        shadow="sm"
-        radius="md"
-        p="xl"
-      >
-        <Stack gap="lg">
-          <div>
-            <Title order={4}>
-              Paste Part Numbers
-            </Title>
+    <SearchFormLayout onSearch={handleSearch}>
+      <Stack gap="lg">
+        <div>
+          <Title order={4}>
+            Paste Part Numbers
+          </Title>
 
-            <Text
-              size="sm"
-              c="dimmed"
-              mt={4}
-            >
-              Enter up to 20 part numbers separated by commas.
-            </Text>
-          </div>
-
-          <Textarea
-            minRows={8}
-            placeholder="e.g. A320-1234, B737-5678, A380-9012..."
-            value={partNumbers}
-            onChange={(e) =>
-              setPartNumbers(e.currentTarget.value)
-            }
-          />
-
-          <Text size="sm" c="dimmed">
-            {partNumbers.trim() === ""
-              ? "0 part number(s) entered"
-              : `${
-                  partNumbers
-                    .split(",")
-                    .filter((item) => item.trim() !== "").length
-                } part number(s) entered`}
+          <Text
+            size="sm"
+            c="dimmed"
+            mt={4}
+          >
+            Enter up to 20 part numbers separated by commas.
           </Text>
+        </div>
 
-          <Grid>
-            <Grid.Col span={{ base: 12, md: 6 }}>
-              <Select
-                label="Condition"
-                placeholder="Select Condition"
-                value={condition}
-                onChange={setCondition}
-                data={[
-                  "New",
-                  "Serviceable",
-                  "Overhauled",
-                  "As Removed",
-                ]}
-              />
-            </Grid.Col>
+        <Textarea
+          minRows={8}
+          placeholder="e.g. A320-1234, B737-5678, A380-9012..."
+          value={partNumbers}
+          onChange={(e) =>
+            setPartNumbers(e.currentTarget.value)
+          }
+        />
 
-            <Grid.Col span={{ base: 12, md: 6 }}>
-              <Select
-                label="Preferred Location"
-                placeholder="Select Location"
-                value={location}
-                onChange={setLocation}
-                data={[
-                  "USA",
-                  "Canada",
-                  "Europe",
-                  "Middle East",
-                  "Asia",
-                ]}
-              />
-            </Grid.Col>
-          </Grid>
-        </Stack>
-      </Paper>
+        <Text size="sm" c="dimmed">
+          {partNumbers.trim() === ""
+            ? "0 part number(s) entered"
+            : `${
+                partNumbers
+                  .split(",")
+                  .filter(
+                    (item) => item.trim() !== ""
+                  ).length
+              } part number(s) entered`}
+        </Text>
 
-      <Button
-        mt="xl"
-        size="lg"
-        radius="lg"
-        color="green"
-        fullWidth
-        leftSection={<IconSearch size={20} />}
-        onClick={handleSearch}
-      >
-        Search
-      </Button>
-    </>
+        <Grid>
+          <Grid.Col span={{ base: 12, md: 6 }}>
+            <Select
+              label="Condition"
+              placeholder="Select Condition"
+              value={condition}
+              onChange={setCondition}
+              data={[
+                "New",
+                "Serviceable",
+                "Overhauled",
+                "As Removed",
+              ]}
+            />
+          </Grid.Col>
+
+          <Grid.Col span={{ base: 12, md: 6 }}>
+            <Select
+              label="Preferred Location"
+              placeholder="Select Location"
+              value={location}
+              onChange={setLocation}
+              data={[
+                "USA",
+                "Canada",
+                "Europe",
+                "Middle East",
+                "Asia",
+              ]}
+            />
+          </Grid.Col>
+        </Grid>
+      </Stack>
+    </SearchFormLayout>
   );
 }
