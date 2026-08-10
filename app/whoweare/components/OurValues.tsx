@@ -1,14 +1,13 @@
 "use client";
 
 import {
-  Box,
-  Card,
   Container,
-  Image,
   SimpleGrid,
   Text,
   Title,
 } from "@mantine/core";
+
+import AircraftPartCard from "./AircraftPartCard";
 
 const values = [
   {
@@ -40,6 +39,7 @@ const values = [
 export default function OurValues() {
   return (
     <Container size="lg" py={80}>
+      {/* Heading */}
       <Title
         order={1}
         ta="center"
@@ -50,10 +50,7 @@ export default function OurValues() {
           lineHeight: 1.2,
         }}
       >
-        <Text component="span" inherit c="#00B060">
-          Find Any Spare Parts
-        </Text>{" "}
-        for Your Aircraft
+        Find Any Spare Parts for Your Aircraft
       </Title>
 
       <Text
@@ -66,54 +63,17 @@ export default function OurValues() {
         Your Hub for Certified Parts, MRO, Engine Leasing & More
       </Text>
 
-      <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl">
+      {/* Cards */}
+      <SimpleGrid
+        cols={{ base: 1, md: 3 }}
+        spacing="xl"
+      >
         {values.map((value) => (
-          <Card
+          <AircraftPartCard
             key={value.title}
-            radius="md"
-            padding={0}
-            shadow="md"
-            style={{
-              overflow: "hidden",
-              position: "relative",
-              cursor: "pointer",
-            }}
-          >
-            <Box pos="relative">
-              <Image
-                src={value.image}
-                alt={value.title}
-                h={260}
-              />
-
-              {/* Gradient Overlay */}
-              <Box
-                pos="absolute"
-                top={0}
-                left={0}
-                right={0}
-                bottom={0}
-                style={{
-                  background:
-                    "linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.15), transparent)",
-                }}
-              />
-
-              {/* Title */}
-              <Title
-                order={2}
-                c="white"
-                ta="center"
-                pos="absolute"
-                bottom={25}
-                left={0}
-                right={0}
-                fw={700}
-              >
-                {value.title}
-              </Title>
-            </Box>
-          </Card>
+            image={value.image}
+            title={value.title}
+          />
         ))}
       </SimpleGrid>
     </Container>
