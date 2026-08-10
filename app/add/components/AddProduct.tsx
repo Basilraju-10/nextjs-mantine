@@ -21,13 +21,25 @@ import { addProduct } from "@/lib/api";
 
 export default function AddProduct() {
   const router = useRouter();
+
   const [loading, setLoading] = useState(false);
+
   const [form, setForm] = useState({
     title: "",
     price: 0,
     category: "",
     image: "",
   });
+
+  const updateForm = (
+    field: keyof typeof form,
+    value: string | number
+  ) => {
+    setForm((current) => ({
+      ...current,
+      [field]: value,
+    }));
+  };
 
   const formIsValid =
     form.title.trim().length > 0 &&
@@ -53,17 +65,11 @@ export default function AddProduct() {
   }
 
   return (
-    <Container size="sm" py="xl">
-      <Breadcrumbs mb="lg">
-        <Anchor href="/" c="dimmed">
-          Home
-        </Anchor>
-        <Anchor href="/catalog" c="dimmed">
-          Catalog
-        </Anchor>
-        <Text c="bold" fw={500}>
-          Add Product
-        </Text>
+    <Container size="md" py="xl">
+      <Breadcrumbs mb="xl">
+        <Anchor href="/">Home</Anchor>
+        <Anchor href="/catalog">Catalog</Anchor>
+        <Text>Add Product</Text>
       </Breadcrumbs>
 
       <Paper p="xl" radius="md" shadow="xs" withBorder>
@@ -77,10 +83,7 @@ export default function AddProduct() {
               label="Product Title"
               value={form.title}
               onChange={(e) =>
-                setForm({
-                  ...form,
-                  title: e.currentTarget.value,
-                })
+                updateForm("title", e.currentTarget.value)
               }
             />
 
@@ -88,10 +91,7 @@ export default function AddProduct() {
               label="Price"
               value={form.price}
               onChange={(value) =>
-                setForm({
-                  ...form,
-                  price: Number(value),
-                })
+                updateForm("price", Number(value))
               }
             />
 
@@ -105,10 +105,7 @@ export default function AddProduct() {
               ]}
               value={form.category}
               onChange={(value) =>
-                setForm({
-                  ...form,
-                  category: value || "",
-                })
+                updateForm("category", value || "")
               }
             />
 
@@ -116,14 +113,16 @@ export default function AddProduct() {
               label="Image URL"
               value={form.image}
               onChange={(e) =>
-                setForm({
-                  ...form,
-                  image: e.currentTarget.value,
-                })
+                updateForm("image", e.currentTarget.value)
               }
             />
 
-            <Button type="submit" color="green" loading={loading} disabled={!formIsValid || loading}>
+            <Button
+              type="submit"
+              color="green"
+              loading={loading}
+              disabled={!formIsValid || loading}
+            >
               Add Product
             </Button>
           </Stack>
