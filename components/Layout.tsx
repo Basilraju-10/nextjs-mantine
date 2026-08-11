@@ -9,15 +9,12 @@ export default function Layout({
   children: React.ReactNode;
 }) {
   return (
-    <AppShell
-      header={{ height: 60 }}
-      padding="md"
-    >
-      <AppShell.Header>
-        <Navbar />
-      </AppShell.Header>
+    <AppShell>
+      <Navbar />
 
-      <AppShell.Main>{children}</AppShell.Main>
+      <AppShell.Main p={0}>
+        {children}
+      </AppShell.Main>
     </AppShell>
   );
 }

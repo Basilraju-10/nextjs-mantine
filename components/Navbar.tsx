@@ -30,7 +30,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 h-20 bg-white border-b border-gray-200 shadow-sm">
+      <header className="z-50 h-20 bg-white border-b border-gray-200 shadow-sm">
         <Container fluid className="h-full">
           <Group
             h="100%"
