@@ -123,7 +123,7 @@ export default function AddProduct() {
 
             <Button
               type="submit"
-              color="green"
+              color="green"  
               loading={loading}
               disabled={!formIsValid || loading}
             >
