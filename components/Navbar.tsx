@@ -200,6 +200,7 @@ export default function Navbar() {
                 variant="filled"
                 radius="xl"
                 size="md"
+                aria-label="LinkedIn"
               >
                 <IconBrandLinkedin size={16} />
               </ActionIcon>
@@ -210,6 +211,7 @@ export default function Navbar() {
                 variant="filled"
                 radius="xl"
                 size="md"
+                aria-label="Call AOG Desk"
               >
                 <IconPhone size={16} />
               </ActionIcon>
@@ -224,6 +226,7 @@ export default function Navbar() {
                 variant="subtle"
                 color="dark"
                 size="md"
+                aria-label="Shopping cart"
               >
                 <IconShoppingCart size={20} />
               </ActionIcon>
@@ -236,6 +239,7 @@ export default function Navbar() {
                   variant="filled"
                   radius="xl"
                   size="md"
+                  aria-label="Download login"
                 >
                   <IconDownload size={15} />
                 </ActionIcon>
@@ -256,6 +260,7 @@ export default function Navbar() {
               hiddenFrom="md"
               opened={opened}
               onClick={() => setOpened(!opened)}
+              aria-label={opened ? "Close navigation menu" : "Open navigation menu"}
             />
 
           </Group>
@@ -266,18 +271,44 @@ export default function Navbar() {
       <Drawer
         opened={opened}
         onClose={() => setOpened(false)}
-        title="Menu"
+        title="Navigation"
         padding="md"
       >
 
-        <Stack gap="lg">
-          <Text>Who We Are</Text>
-          <Text>Services</Text>
-          <Text>Quality</Text>
-          <Text>Events</Text>
-          <Text>More</Text>
-          <Text>AOG Desk</Text>
-          <Text>GFA Login</Text>
+        <Stack gap="md">
+          {[
+            { label: "Who We Are", href: "/whoweare" },
+            { label: "Exchange", href: "/services/exchange" },
+            { label: "Repair", href: "/services/repair" },
+            { label: "Support", href: "/services/support" },
+            { label: "Quality", href: "/quality" },
+            { label: "Events", href: "/events" },
+            { label: "About", href: "/about" },
+            { label: "Careers", href: "/careers" },
+          ].map((item) => (
+            <Text
+              key={item.href}
+              component={Link}
+              href={item.href}
+              fw={600}
+              size="md"
+              styles={{
+                root: {
+                  textDecoration: "none",
+                  color: "#0B7A3E",
+                  transition: "color 0.2s ease",
+                  display: "block",
+                },
+              }}
+            >
+              {item.label}
+            </Text>
+          ))}
+
+          <Text c="dimmed" size="sm" mt="xl">
+            Quick access to parts, services, quality, and support.
+          </Text>
+
         </Stack>
 
       </Drawer>
