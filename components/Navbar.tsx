@@ -176,7 +176,9 @@ export default function Navbar() {
                     <Menu.Item component={Link} href="/careers">
                       Careers
                     </Menu.Item>
-
+                    <Menu.Item component={Link} href="/relationships">
+                      Relationships
+                    </Menu.Item>
                   </Menu.Dropdown>
 
                 </Menu>
