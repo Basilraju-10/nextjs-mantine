@@ -171,7 +171,7 @@ export default function Navbar() {
                     <Menu.Item component={Link} href="/career">
                       Career
                     </Menu.Item>
-                    <Menu.Item component={Link} href="/Inventory">
+                    <Menu.Item component={Link} href="/contact">
                       Contact
                     </Menu.Item>
                     <Menu.Item component={Link} href="/Inventory">
