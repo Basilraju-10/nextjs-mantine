@@ -101,7 +101,7 @@ export default function Navbar() {
                       Exchange
                     </Menu.Item>
 
-                    <Menu.Item component={Link} href="/services/repair">
+                    <Menu.Item component={Link} href="/repair">
                       Repair
                     </Menu.Item>
 
