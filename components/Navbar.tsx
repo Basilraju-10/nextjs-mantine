@@ -105,10 +105,12 @@ export default function Navbar() {
                       Repair
                     </Menu.Item>
 
-                    <Menu.Item component={Link} href="/services/support">
-                      Support
+                    <Menu.Item component={Link} href="/support">
+                      AOG Desk
                     </Menu.Item>
-
+                    <Menu.Item component={Link} href="/component">
+                      Component Lease
+                    </Menu.Item>
                   </Menu.Dropdown>
                 </Menu>
 
