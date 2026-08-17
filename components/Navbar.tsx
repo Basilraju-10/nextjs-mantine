@@ -97,7 +97,7 @@ export default function Navbar() {
 
                   <Menu.Dropdown>
 
-                    <Menu.Item component={Link} href="/services/exchange">
+                    <Menu.Item component={Link} href="/exchange">
                       Exchange
                     </Menu.Item>
 
@@ -228,15 +228,16 @@ export default function Navbar() {
               </Text>
 
 
-              <ActionIcon
-                variant="subtle"
-                color="dark"
-                size="md"
-                aria-label="Shopping cart"
-              >
-                <IconShoppingCart size={20} />
-              </ActionIcon>
-
+             <ActionIcon
+              component={Link} 
+              href="/cart"
+              variant="subtle"
+              color="dark"
+              size="md"
+              aria-label="Shopping cart"
+            >
+              <IconShoppingCart size={20} />
+            </ActionIcon>
 
               <Group gap={6} align="center">
 

@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import Footer from "../whoweare/components/Footer";
 import ContactBanner from "./components/ContactBanner";
 import OfficeLocation from "../career/components/OfficeLocation";
-import FAQSection from "../services/exchange/components/FAQSection";
+import FAQSection from "../exchange/components/FAQSection";
 import ContactSection from "./components/ContactSection";
 
 
