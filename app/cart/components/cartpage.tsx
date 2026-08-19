@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 import {
+  Anchor,
   Box,
   Breadcrumbs,
   Button,
@@ -43,14 +44,14 @@ export default function CartPage() {
             },
           }}
         >
-          <Text
+          <Anchor
             size="sm"
             c="dimmed"
             style={{ cursor: "pointer" }}
             onClick={() => router.push("/")}
           >
             Home
-          </Text>
+          </Anchor>
 
           <Text size="sm" c="dark">
             Cart

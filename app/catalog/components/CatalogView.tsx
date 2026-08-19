@@ -44,8 +44,15 @@ export default function CatalogView() {
 
       {/* Breadcrumb */}
 
-      <Breadcrumbs mb="lg">
-
+        <Breadcrumbs
+          mb="md"
+          separator="›"
+          styles={{
+            separator: {
+              color: "#6C757D",
+            },
+          }}
+        >
         <Anchor
           href="/"
           c="dimmed"
@@ -54,8 +61,7 @@ export default function CatalogView() {
         </Anchor>
 
         <Text
-          c="bold"
-          fw={500}
+          size="sm" c="dark"
         >
           Catalog
         </Text>

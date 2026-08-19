@@ -41,7 +41,15 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <Container size="xl" py="xl">
 
         {/* Breadcrumbs */}
-        <Breadcrumbs mb="lg">
+        <Breadcrumbs
+          mb="md"
+          separator="›"
+          styles={{
+            separator: {
+              color: "#6C757D",
+            },
+          }}
+        >
           <Anchor
             href="/"
             c="dimmed"
@@ -57,8 +65,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           </Anchor>
 
           <Text
-            c="bold"
-            fw={500}
+            size="sm" c="dark"
           >
             Product
           </Text>
