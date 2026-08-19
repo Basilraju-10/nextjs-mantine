@@ -79,7 +79,7 @@ export default function Navbar() {
                 </Link>
 
 
-                <Menu trigger="hover" shadow="md" width={180}>
+                <Menu trigger="hover" shadow="md" width={220}>
                   <Menu.Target>
                     <Group
                       gap={4}
