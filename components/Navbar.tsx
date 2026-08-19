@@ -111,11 +111,11 @@ export default function Navbar() {
                     <Menu.Item component={Link} href="/component">
                       Component Lease
                     </Menu.Item>
-                    <Menu.Item component={Link} href="/component">
-                      Component Lease
+                    <Menu.Item component={Link} href="/inventory-sales">
+                      Inventory Consignment Sales
                     </Menu.Item>
-                    <Menu.Item component={Link} href="/component">
-                      Component Lease
+                    <Menu.Item component={Link} href="/logistics">
+                      Logistics
                     </Menu.Item>
                     <Menu.Item component={Link} href="/component">
                       Component Lease
