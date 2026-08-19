@@ -105,7 +105,7 @@ export default function Navbar() {
                       Repair
                     </Menu.Item>
 
-                    <Menu.Item component={Link} href="/support">
+                    <Menu.Item component={Link} href="/aog-desk">
                       AOG Desk
                     </Menu.Item>
                     <Menu.Item component={Link} href="/component">
@@ -237,7 +237,12 @@ export default function Navbar() {
               </ActionIcon>
 
 
-              <Text fw={500} size="sm">
+              <Text
+                fw={500}
+                size="sm"
+                component={Link}
+                href="/aog-desk"
+              >
                 AOG Desk
               </Text>
 
