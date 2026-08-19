@@ -117,11 +117,11 @@ export default function Navbar() {
                     <Menu.Item component={Link} href="/logistics">
                       Logistics
                     </Menu.Item>
-                    <Menu.Item component={Link} href="/qualitycontrol">
+                    <Menu.Item component={Link} href="/quality-control">
                       Quality Control
                     </Menu.Item>
-                    <Menu.Item component={Link} href="/inventory-sales">
-                      Inventory Consignment Sales
+                    <Menu.Item component={Link} href="/surplus-parts">
+                      Surplus Parts Purchase
                     </Menu.Item>
                   </Menu.Dropdown>
                 </Menu>
