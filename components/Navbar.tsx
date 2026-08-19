@@ -304,9 +304,9 @@ export default function Navbar() {
         <Stack gap="md">
           {[
             { label: "Who We Are", href: "/whoweare" },
-            { label: "Exchange", href: "/services/exchange" },
-            { label: "Repair", href: "/services/repair" },
-            { label: "Support", href: "/services/support" },
+            { label: "Exchange", href: "/exchange" },
+            { label: "Repair", href: "/repair" },
+            { label: "Support", href: "/support" },
             { label: "Quality", href: "/quality" },
             { label: "Events", href: "/events" },
             { label: "About", href: "/about" },
