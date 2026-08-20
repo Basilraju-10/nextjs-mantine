@@ -93,6 +93,7 @@ export default function ContactSection() {
               <TextInput
                 placeholder="Full Name *"
                 size="md"
+                aria-label="Full Name"
                 styles={{
                   input: {
                     height: 43,
@@ -106,6 +107,8 @@ export default function ContactSection() {
               <TextInput
                 placeholder="Email Address *"
                 size="md"
+                type="email"
+                aria-label="Email Address"
                 styles={{
                   input: {
                     height: 43,
@@ -152,6 +155,7 @@ export default function ContactSection() {
                   style={{
                     flex: 1,
                   }}
+                  aria-label="Mobile Number"
                   styles={{
                     input: {
                       height: 41,
@@ -166,6 +170,7 @@ export default function ContactSection() {
               <Select
                 placeholder="What are you looking for?"
                 size="md"
+                aria-label="What are you looking for?"
                 data={[
                   "Aircraft Parts",
                   "Repair & Overhaul",
@@ -188,6 +193,7 @@ export default function ContactSection() {
                 placeholder="Message"
                 minRows={2}
                 autosize={false}
+                aria-label="Message"
                 styles={{
                   input: {
                     height: 56,
@@ -207,6 +213,7 @@ export default function ContactSection() {
                 h={42}
                 mt={8}
                 color="#006B35"
+                aria-label="Submit contact form"
                 styles={{
                   root: {
                     fontSize: 14,
