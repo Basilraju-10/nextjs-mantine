@@ -71,6 +71,7 @@ export default function RelationshipCertificateSection() {
                 variant="transparent"
                 color="green"
                 style={{ flexShrink: 0 }}
+                aria-label="Download certificate"
                 >
                 <IconDownload size={18} />
               </ActionIcon>

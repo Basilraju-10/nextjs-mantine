@@ -65,6 +65,7 @@ export default function CertificateSection() {
                 <ActionIcon
                   variant="transparent"
                   color="green"
+                  aria-label="Download certificate"
                 >
                   <IconDownload size={18} />
                 </ActionIcon>

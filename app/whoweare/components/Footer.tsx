@@ -45,6 +45,7 @@ export default function Footer() {
                 color="white"
                 variant="filled"
                 bg="#0C823C"
+                aria-label="Facebook"
               >
                 <IconBrandFacebook size={20} />
               </ActionIcon>
@@ -55,6 +56,7 @@ export default function Footer() {
                 color="white"
                 variant="filled"
                 bg="#0C823C"
+                aria-label="LinkedIn"
               >
                 <IconBrandLinkedin size={20} />
               </ActionIcon>
@@ -65,6 +67,7 @@ export default function Footer() {
                 color="white"
                 variant="filled"
                 bg="#0C823C"
+                aria-label="Instagram"
               >
                 <IconBrandInstagram size={20} />
               </ActionIcon>

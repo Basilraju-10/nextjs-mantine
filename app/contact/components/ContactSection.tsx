@@ -207,7 +207,7 @@ export default function ContactSection() {
 
               {/* Submit */}
               <Button
-                type="submit"
+                type="button"
                 radius="xl"
                 w={128}
                 h={42}
