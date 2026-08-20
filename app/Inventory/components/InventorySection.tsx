@@ -45,7 +45,7 @@ export default function InventorySection() {
                 c="#475569"
                 style={{ lineHeight: 2 }}
               >
-               From our decade long successful run with the heavy weights of aviation industry, we understand the importance of maintaining the right inventory to cope up with the parodic demand, technical dependencies, and variable purchase and repair lead times. GFA has been providing some of the world's regional airlines with the highest quality spare parts from our 20,000 sq. ft. warehouse with more than 2 million parts maintained in excellent condition.
+               From our decade long successful run with the heavy weights of aviation industry, we understand the importance of maintaining the right inventory to cope up with the parodic demand, technical dependencies, and variable purchase and repair lead times. GFA has been providing some of the world&apos;s regional airlines with the highest quality spare parts from our 20,000 sq. ft. warehouse with more than 2 million parts maintained in excellent condition.
               </Text>
             </Grid.Col>
 

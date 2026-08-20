@@ -75,7 +75,7 @@ export default function UnlockingValue() {
 
               </Flex>
                     <p>
-                   With custom lease models tailored to meet dynamic operational demands, GFA's leasing programs guarantee consistent value while preserving capital, assuring that your fleets are always airworthy.
+                   With custom lease models tailored to meet dynamic operational demands, GFA&apos;s leasing programs guarantee consistent value while preserving capital, assuring that your fleets are always airworthy.
                     </p>
 
               {/* Stats */}

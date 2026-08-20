@@ -56,7 +56,7 @@ export default function ContactSection() {
                 }}
               >
                 Have questions or inquiries about our aerospace and fleet
-                asset solutions? We're here to help. Contact GFA today for
+                asset solutions? We&apos;re here to help. Contact GFA today for
                 more information.
               </Text>
             </Box>

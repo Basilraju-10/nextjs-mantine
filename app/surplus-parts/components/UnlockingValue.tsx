@@ -75,7 +75,7 @@ export default function UnlockingValue() {
 
               </Flex>
                     <p>
-                   GFA's surplus purchasing programs offer dynamic options to buy excess or surplus inventory at competitive prices, providing exceptional value while securing essential spares for your fleets.
+                   GFA&apos;s surplus purchasing programs offer dynamic options to buy excess or surplus inventory at competitive prices, providing exceptional value while securing essential spares for your fleets.
                     </p>
 
               {/* Stats */}
