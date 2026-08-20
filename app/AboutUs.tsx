@@ -49,12 +49,12 @@ export default function AboutUs() {
               size="md"
               style={{ lineHeight: 2 }}
             >
-              When time is of the essence, this GFA program saves the day.
-              Let's say you have the component you need, but it requires a
-              repair you don't have time to make. No problem. Exchange it
-              with one of ours. Chances are, we have several in our vast
-              inventory, each one traced to a regulated source that assures
-              it's in serviceable condition, ready for installation.
+               When time is of the essence, this GFA program saves the day.
+  Let&apos;s say you have the component you need, but it requires a
+  repair you don&apos;t have time to make. No problem. Exchange it
+  with one of ours. Chances are, we have several in our vast
+  inventory, each one traced to a regulated source that assures
+  it&apos;s in serviceable condition, ready for installation.
             </Text>
 
             {/* Centered Button */}
