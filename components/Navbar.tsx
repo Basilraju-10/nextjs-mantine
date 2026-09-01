@@ -28,7 +28,6 @@ import {
   IconPhone,
   IconPlus,
   IconShoppingCart,
-  IconX,
 } from "@tabler/icons-react";
 
 export default function Navbar() {
@@ -37,8 +36,7 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ================= NAVBAR ================= */}
-
+      {/* NAVBAR */}
       <header className="z-50 h-20 border-b border-gray-200 bg-white shadow-sm">
         <Container fluid className="h-full">
           <Group
@@ -48,11 +46,9 @@ export default function Navbar() {
             align="center"
             wrap="nowrap"
           >
-            {/* ================= LEFT ================= */}
-
+            {/* LEFT */}
             <Group gap="lg" align="center" wrap="nowrap">
               {/* Logo */}
-
               <Image
                 src="https://gfa.aero/theme_golden_aviation/static/src/image%203.0/logo.svg"
                 alt="GFA Logo"
@@ -61,38 +57,20 @@ export default function Navbar() {
                 priority
               />
 
-              {/* Desktop Navigation */}
-
+              {/* DESKTOP NAVIGATION */}
               <Group
                 gap="lg"
                 visibleFrom="md"
                 align="center"
                 wrap="nowrap"
               >
-                {/* Who We Are */}
-
-                <Link
-                  href="/whoweare"
-                  style={{ textDecoration: "none" }}
-                >
-                  <Text
-                    fw={500}
-                    size="sm"
-                    styles={{
-                      root: {
-                        transition: "color 0.2s ease",
-                        "&:hover": {
-                          color: "#2dab56",
-                        },
-                      },
-                    }}
-                  >
+                <Link href="/whoweare" style={{ textDecoration: "none" }}>
+                  <Text fw={500} size="sm">
                     Who We Are
                   </Text>
                 </Link>
 
-                {/* Services */}
-
+                {/* SERVICES */}
                 <Menu trigger="hover" shadow="md" width={220}>
                   <Menu.Target>
                     <Group
@@ -103,7 +81,6 @@ export default function Navbar() {
                       <Text fw={500} size="sm">
                         Services
                       </Text>
-
                       <IconChevronDown size={15} />
                     </Group>
                   </Menu.Target>
@@ -152,39 +129,17 @@ export default function Navbar() {
                   </Menu.Dropdown>
                 </Menu>
 
-                {/* Quality */}
-
-                <Link
-                  href="/quality"
-                  style={{ textDecoration: "none" }}
-                >
-                  <Text
-                    fw={500}
-                    size="sm"
-                    styles={{
-                      root: {
-                        transition: "color 0.2s ease",
-                        "&:hover": {
-                          color: "#2dab56",
-                        },
-                      },
-                    }}
-                  >
+                <Link href="/quality" style={{ textDecoration: "none" }}>
+                  <Text fw={500} size="sm">
                     Quality
                   </Text>
                 </Link>
 
-                {/* Events */}
-
-                <Link
-                  href="/events"
-                  style={{ textDecoration: "none" }}
-                >
+                <Link href="/events" style={{ textDecoration: "none" }}>
                   <Text size="sm">Events</Text>
                 </Link>
 
-                {/* More */}
-
+                {/* MORE */}
                 <Menu trigger="hover" shadow="md" width={180}>
                   <Menu.Target>
                     <Group
@@ -192,11 +147,7 @@ export default function Navbar() {
                       align="center"
                       style={{ cursor: "pointer" }}
                     >
-                      <IconPlus
-                        size={14}
-                        color="#0B7A3E"
-                      />
-
+                      <IconPlus size={14} color="#0B7A3E" />
                       <Text fw={500} size="sm">
                         More
                       </Text>
@@ -235,8 +186,7 @@ export default function Navbar() {
               </Group>
             </Group>
 
-            {/* ================= RIGHT ================= */}
-
+            {/* RIGHT */}
             <Group
               gap="md"
               visibleFrom="md"
@@ -244,7 +194,6 @@ export default function Navbar() {
               wrap="nowrap"
             >
               {/* LinkedIn */}
-
               <ActionIcon
                 color="green"
                 variant="filled"
@@ -256,7 +205,6 @@ export default function Navbar() {
               </ActionIcon>
 
               {/* Phone */}
-
               <ActionIcon
                 color="green"
                 variant="filled"
@@ -267,22 +215,18 @@ export default function Navbar() {
                 <IconPhone size={16} />
               </ActionIcon>
 
-              {/* AOG Desk */}
-
+              {/* AOG DESK */}
               <Text
                 fw={500}
                 size="sm"
                 component={Link}
                 href="/aog-desk"
-                style={{
-                  textDecoration: "none",
-                }}
+                style={{ textDecoration: "none" }}
               >
                 AOG Desk
               </Text>
 
-              {/* Cart */}
-
+              {/* CART */}
               <ActionIcon
                 component={Link}
                 href="/cart"
@@ -294,14 +238,11 @@ export default function Navbar() {
                 <IconShoppingCart size={20} />
               </ActionIcon>
 
-              {/* ================= GFA LOGIN ================= */}
-
+              {/* GFA LOGIN */}
               <Group
                 gap={6}
                 align="center"
-                style={{
-                  cursor: "pointer",
-                }}
+                style={{ cursor: "pointer" }}
                 onClick={() => setLoginOpened(true)}
               >
                 <ActionIcon
@@ -320,24 +261,20 @@ export default function Navbar() {
               </Group>
             </Group>
 
-            {/* ================= MOBILE MENU ================= */}
-
+            {/* MOBILE MENU */}
             <Burger
               hiddenFrom="md"
               opened={opened}
               onClick={() => setOpened(!opened)}
               aria-label={
-                opened
-                  ? "Close navigation menu"
-                  : "Open navigation menu"
+                opened ? "Close navigation menu" : "Open navigation menu"
               }
             />
           </Group>
         </Container>
       </header>
 
-      {/* ================= MOBILE DRAWER ================= */}
-
+      {/* MOBILE DRAWER */}
       <Drawer
         opened={opened}
         onClose={() => setOpened(false)}
@@ -346,38 +283,14 @@ export default function Navbar() {
       >
         <Stack gap="md">
           {[
-            {
-              label: "Who We Are",
-              href: "/whoweare",
-            },
-            {
-              label: "Exchange",
-              href: "/exchange",
-            },
-            {
-              label: "Repair",
-              href: "/repair",
-            },
-            {
-              label: "Support",
-              href: "/support",
-            },
-            {
-              label: "Quality",
-              href: "/quality",
-            },
-            {
-              label: "Events",
-              href: "/events",
-            },
-            {
-              label: "About",
-              href: "/about",
-            },
-            {
-              label: "Careers",
-              href: "/careers",
-            },
+            { label: "Who We Are", href: "/whoweare" },
+            { label: "Exchange", href: "/exchange" },
+            { label: "Repair", href: "/repair" },
+            { label: "Support", href: "/support" },
+            { label: "Quality", href: "/quality" },
+            { label: "Events", href: "/events" },
+            { label: "About", href: "/about" },
+            { label: "Careers", href: "/careers" },
           ].map((item) => (
             <Text
               key={item.href}
@@ -385,13 +298,10 @@ export default function Navbar() {
               href={item.href}
               fw={600}
               size="md"
-              styles={{
-                root: {
-                  textDecoration: "none",
-                  color: "#0B7A3E",
-                  transition: "color 0.2s ease",
-                  display: "block",
-                },
+              style={{
+                textDecoration: "none",
+                color: "#0B7A3E",
+                display: "block",
               }}
               onClick={() => setOpened(false)}
             >
@@ -405,13 +315,12 @@ export default function Navbar() {
         </Stack>
       </Drawer>
 
-      {/* ================= LOGIN MODAL ================= */}
-
+      {/* LOGIN MODAL */}
       <Modal
         opened={loginOpened}
         onClose={() => setLoginOpened(false)}
         centered
-        withCloseButton={false}
+        title="Sign In to Continue"
         size={440}
         radius="md"
         padding={16}
@@ -421,98 +330,38 @@ export default function Navbar() {
         }}
       >
         <Stack gap="md">
-          {/* Modal Header */}
-
-          <Group
-            justify="space-between"
-            align="center"
-          >
-            <Text
-              size="lg"
-              fw={500}
-            >
-              Sign In to Continue
-            </Text>
-
-            <ActionIcon
-              variant="subtle"
-              color="dark"
-              onClick={() => setLoginOpened(false)}
-              aria-label="Close login modal"
-              size="sm"
-            >
-              <IconX size={20} />
-            </ActionIcon>
-          </Group>
-
-          {/* Description */}
-
-          <Text
-            size="sm"
-            c="dimmed"
-          >
+          <Text size="sm" c="dimmed">
             Please sign in to add items to cart or raise RFQ
           </Text>
 
-          {/* Sign Up */}
-
           <Text size="sm">
             New to GFA?{" "}
-            <Anchor
-              href="/signup"
-              c="green"
-              fw={500}
-            >
+            <Anchor href="/signup" c="green" fw={500}>
               Sign up
             </Anchor>
           </Text>
-
-          {/* Email */}
 
           <TextInput
             label="Email ID"
             placeholder="you@mantine.dev"
             required
-            size="md"
           />
-
-          {/* Password */}
 
           <PasswordInput
             label="Password"
             placeholder="Your password"
             required
-            size="md"
           />
 
-          {/* Remember / Forgot */}
+          <Group justify="space-between">
+            <Checkbox label="Remember me" size="sm" />
 
-          <Group
-            justify="space-between"
-            align="center"
-          >
-            <Checkbox
-              label="Remember me"
-              size="sm"
-            />
-
-            <Anchor
-              href="/forgot-password"
-              c="green"
-              size="sm"
-            >
+            <Anchor href="/forgot-password" c="green" size="sm">
               Forgot password?
             </Anchor>
           </Group>
 
-          {/* Sign In Button */}
-
-          <Button
-            fullWidth
-            color="green"
-            size="md"
-            mt="md"
-          >
+          <Button fullWidth color="green" mt="md">
             Sign In
           </Button>
         </Stack>
