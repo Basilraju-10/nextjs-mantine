@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+:root {
+  --brand-green: #0b7a3e;
+  --brand-green-hover: #086b36;
+  --brand-green-light: #eaf6f0;
+}
+
 html,
 body {
   margin: 0;
@@ -27,7 +33,7 @@ img {
 }
 
 ::selection {
-  background: #0B7A3E;
+  background: var(--brand-green);
   color: white;
 }
 
@@ -56,6 +62,12 @@ img {
 .mantine-Card-root:hover {
   transform: translateY(-6px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Active Selected Product Card Styling */
+.product-card-selected {
+  border: 1px solid var(--brand-green) !important;
+  background-color: var(--brand-green-light) !important;
 }
 
 .service-card:hover {
@@ -149,7 +161,7 @@ img {
 }
 
 .latest-news-title span {
-  color: #0b7a3e;
+  color: var(--brand-green);
 }
 
 .articles-box {
@@ -175,7 +187,7 @@ img {
   width: 100px;
   flex-shrink: 0;
   background-color: #f1f5f9;
-  border-left: 4px solid #0b7a3e;
+  border-left: 4px solid var(--brand-green);
   padding: 16px 12px;
   border-radius: 4px;
   text-align: center;
@@ -211,15 +223,15 @@ img {
 }
 
 .view-articles-btn {
-  border-color: #0b7a3e;
-  color: #0b7a3e;
+  border-color: var(--brand-green);
+  color: var(--brand-green);
   font-weight: 600;
   padding: 0 32px;
   transition: all 0.2s ease;
 }
 
 .view-articles-btn:hover {
-  background: #0b7a3e;
+  background: var(--brand-green);
   color: white;
 }
 
