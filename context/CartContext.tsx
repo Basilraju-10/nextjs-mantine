@@ -16,6 +16,7 @@ interface CartContextType {
   cart: CartItem[];
   addToCart: (product: Omit<CartItem, "quantity">) => void;
   removeFromCart: (id: string) => void;
+  updateQuantity: (id: string, delta: number) => void;
   clearCart: () => void;
   totalItems: number;
 }
@@ -26,7 +27,6 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Load cart state from localStorage on initial render
   useEffect(() => {
     const savedCart = localStorage.getItem("gfa_cart");
     if (savedCart) {
@@ -39,58 +39,62 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     setIsLoaded(true);
   }, []);
 
-  // Sync cart changes to localStorage after initial load
   useEffect(() => {
     if (isLoaded) {
       localStorage.setItem("gfa_cart", JSON.stringify(cart));
     }
   }, [cart, isLoaded]);
 
-  // Add item locally & trigger POST request to FakeStoreAPI
   const addToCart = async (product: Omit<CartItem, "quantity">) => {
-    // 1. Update React local state
     setCart((prevCart) => {
-      const existingItem = prevCart.find((item) => item.id === product.id);
+      const existingItem = prevCart.find((item) => String(item.id) === String(product.id));
       if (existingItem) {
         return prevCart.map((item) =>
-          item.id === product.id
+          String(item.id) === String(product.id)
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
       }
-      return [...prevCart, { ...product, quantity: 1 }];
+      return [...prevCart, { ...product, id: String(product.id), quantity: 1 }];
     });
 
-    // 2. Show Mantine Notification
     notifications.show({
       title: "Added to Cart!",
       message: `${product.title} has been added to your shopping cart.`,
       color: "green",
     });
 
-    // 3. POST to FakeStoreAPI
     try {
-      const response = await fetch("https://fakestoreapi.com/carts", {
+      await fetch("https://fakestoreapi.com/carts", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           userId: 1,
           date: new Date().toISOString().split("T")[0],
           products: [{ productId: Number(product.id), quantity: 1 }],
         }),
       });
-
-      const data = await response.json();
-      console.log("FakeStoreAPI POST Response:", data);
     } catch (error) {
-      console.error("API POST request failed:", error);
+      console.error("Failed to post cart item directly:", error);
     }
   };
 
   const removeFromCart = (id: string) => {
-    setCart((prev) => prev.filter((item) => item.id !== id));
+    setCart((prev) => prev.filter((item) => String(item.id) !== String(id)));
+  };
+
+  const updateQuantity = (id: string, delta: number) => {
+    setCart((prev) =>
+      prev
+        .map((item) => {
+          if (String(item.id) === String(id)) {
+            const newQty = item.quantity + delta;
+            return newQty > 0 ? { ...item, quantity: newQty } : null;
+          }
+          return item;
+        })
+        .filter((item): item is CartItem => item !== null)
+    );
   };
 
   const clearCart = () => setCart([]);
@@ -99,7 +103,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, clearCart, totalItems }}
+      value={{ cart, addToCart, removeFromCart, updateQuantity, clearCart, totalItems }}
     >
       {children}
     </CartContext.Provider>
