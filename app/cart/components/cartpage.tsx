@@ -18,7 +18,7 @@ import {
   UnstyledButton,
 } from "@mantine/core";
 import { IconShoppingCart, IconFileText, IconTrash } from "@tabler/icons-react";
-import { useCart } from "@/app/context/CartContext";
+import { useCart } from "@/context/CartContext";
 
 export default function CartPage() {
   const router = useRouter();

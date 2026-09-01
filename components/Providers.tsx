@@ -2,7 +2,7 @@
 
 import { MantineProvider } from "@mantine/core";
 import { Notifications } from "@mantine/notifications";
-import { CartProvider } from "@/app/context/CartContext";
+import { CartProvider } from "@/context/CartContext";
 
 import "@mantine/core/styles.css";
 import "@mantine/notifications/styles.css";

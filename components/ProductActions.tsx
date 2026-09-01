@@ -1,7 +1,7 @@
 "use client";
 
 import { Button, Group } from "@mantine/core";
-import { useCart } from "@/app/context/CartContext";
+import { useCart } from "@/context/CartContext";
 
 interface ProductActionsProps {
   product: {
