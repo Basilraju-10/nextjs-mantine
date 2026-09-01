@@ -6,6 +6,7 @@ import SearchLanding from "@/components/SearchLanding";
 import ServicesSection from "./whoweare/components/ServicesSection";
 import Footer from "./whoweare/components/Footer";
 import AboutUs from "./AboutUs";
+import ClientsSection from "@/components/ClientsSection";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
 
       <FeaturedProducts/>
       <AboutUs/>
+      <ClientsSection/>
        <ServicesSection/>
        <Footer/>
        
