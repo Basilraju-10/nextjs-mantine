@@ -9,7 +9,7 @@ import "@mantine/notifications/styles.css";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <MantineProvider>
+    <MantineProvider theme={{ primaryColor: "green" }}>
       <Notifications position="top-right" zIndex={1000} />
       <CartProvider>{children}</CartProvider>
     </MantineProvider>
