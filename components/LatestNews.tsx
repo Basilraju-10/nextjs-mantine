@@ -50,8 +50,8 @@ export default function LatestNews() {
           </Title>
         </Box>
 
-        {/* Articles */}
-        <Paper className="articles-box" withBorder>
+        {/* Articles List Container */}
+        <Paper className="articles-box" shadow="none">
           {articles.map((article, index) => (
             <Box
               key={index}
@@ -59,18 +59,18 @@ export default function LatestNews() {
                 index === articles.length - 1 ? "last-article" : ""
               }`}
             >
-              {/* Date */}
+              {/* Green Date Badge */}
               <Box className="article-date">
-                <Text fw={700} size="md">
+                <Text fw={700} className="article-date-day">
                   {article.date}
                 </Text>
 
-                <Text size="sm" c="dimmed">
+                <Text className="article-date-year">
                   {article.year}
                 </Text>
               </Box>
 
-              {/* Content */}
+              {/* Title & Description */}
               <Box className="article-content">
                 <Title order={4} className="article-title">
                   {article.title}
@@ -84,7 +84,7 @@ export default function LatestNews() {
           ))}
         </Paper>
 
-        {/* Button */}
+        {/* Bottom CTA Button */}
         <Box ta="center" mt={48}>
           <Button
             variant="outline"
