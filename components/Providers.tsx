@@ -1,21 +1,17 @@
 "use client";
 
 import { MantineProvider } from "@mantine/core";
+import { Notifications } from "@mantine/notifications";
+import { CartProvider } from "@/app/context/CartContext";
+
 import "@mantine/core/styles.css";
+import "@mantine/notifications/styles.css";
 
-import theme from "@/theme";
-
-export default function Providers({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <MantineProvider
-      theme={theme}
-      defaultColorScheme="light"
-    >
-      {children}
+    <MantineProvider>
+      <Notifications position="top-right" zIndex={1000} />
+      <CartProvider>{children}</CartProvider>
     </MantineProvider>
   );
 }

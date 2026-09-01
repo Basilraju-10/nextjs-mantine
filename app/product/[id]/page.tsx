@@ -1,10 +1,8 @@
 import { notFound } from "next/navigation";
-
 import {
   Anchor,
   Badge,
   Breadcrumbs,
-  Button,
   Container,
   Divider,
   Grid,
@@ -20,6 +18,7 @@ import {
 import Layout from "@/components/Layout";
 import { getProduct } from "@/lib/api";
 import Footer from "@/app/whoweare/components/Footer";
+import ProductActions from "@/components/ProductActions";
 
 interface ProductPageProps {
   params: Promise<{
@@ -29,7 +28,6 @@ interface ProductPageProps {
 
 export default async function ProductPage({ params }: ProductPageProps) {
   const { id } = await params;
-
   const product = await getProduct(id);
 
   if (!product) {
@@ -39,127 +37,40 @@ export default async function ProductPage({ params }: ProductPageProps) {
   return (
     <Layout>
       <Container size="xl" py="xl">
-
-        {/* Breadcrumbs */}
-        <Breadcrumbs
-          mb="md"
-          separator="›"
-          styles={{
-            separator: {
-              color: "#6C757D",
-            },
-          }}
-        >
-          <Anchor
-            href="/"
-            c="dimmed"
-          >
-            Home
-          </Anchor>
-
-          <Anchor
-            href="/catalog"
-            c="dimmed"
-          >
-            Catalog
-          </Anchor>
-
-          <Text
-            size="sm" c="dark"
-          >
-            Product
-          </Text>
+        <Breadcrumbs mb="md" separator="›">
+          <Anchor href="/" c="dimmed">Home</Anchor>
+          <Anchor href="/catalog" c="dimmed">Catalog</Anchor>
+          <Text size="sm" c="dark">Product</Text>
         </Breadcrumbs>
 
-
-        <Paper
-          p="xl"
-          radius="md"
-          withBorder
-          shadow="xs"
-        >
-
+        <Paper p="xl" radius="md" withBorder shadow="xs">
           <Grid>
-
-            {/* Product Image */}
             <GridCol span={{ base: 12, md: 5 }}>
-              <Image
-                src={product.image}
-                alt={product.title}
-                h={420}
-                fit="contain"
-              />
+              <Image src={product.image} alt={product.title} h={420} fit="contain" />
             </GridCol>
 
-
-            {/* Product Details */}
             <GridCol span={{ base: 12, md: 7 }}>
               <Stack>
-
                 <Group>
-                  <Badge color="green">
-                    IN STOCK
-                  </Badge>
-
-                  <Badge variant="light">
-                    AR
-                  </Badge>
+                  <Badge color="green">IN STOCK</Badge>
+                  <Badge variant="light">AR</Badge>
                 </Group>
 
-
-                <Title order={2}>
-                  {product.title}
-                </Title>
-
-
-                <Text c="dimmed">
-                  {product.category}
-                </Text>
-
-
+                <Title order={2}>{product.title}</Title>
+                <Text c="dimmed">{product.category}</Text>
                 <Divider />
 
-
-                <Title c="green">
-                  ${product.price}
-                </Title>
-
-
-                <Text>
-                  {product.description}
-                </Text>
-
-
+                <Title c="green">${product.price}</Title>
+                <Text>{product.description}</Text>
                 <Divider />
 
-
-                <Group>
-
-                  <Button color="green">
-                    Add To Cart
-                  </Button>
-
-
-                  <Button
-                    component="a"
-                    href="/catalog"
-                    variant="outline"
-                    color="green"
-                  >
-                    Back
-                  </Button>
-
-                </Group>
-
+                {/* Client component carrying functional add-to-cart logic */}
+                <ProductActions product={product} />
               </Stack>
             </GridCol>
-
           </Grid>
-
         </Paper>
-
       </Container>
-
       <Footer />
     </Layout>
   );
