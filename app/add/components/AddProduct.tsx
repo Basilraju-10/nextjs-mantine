@@ -66,7 +66,16 @@ export default function AddProduct() {
 
   return (
     <Container size="md" py="xl">
-      <Breadcrumbs mb="xl">
+      
+        <Breadcrumbs
+          mb="md"
+          separator="›"
+          styles={{
+            separator: {
+              color: "#6C757D",
+            },
+          }}
+        >
         <Anchor href="/" c="dimmed">
           Home
         </Anchor>
