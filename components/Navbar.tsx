@@ -8,11 +8,11 @@ import {
   ActionIcon,
   Anchor,
   Button,
-  Burger,
   Checkbox,
   Container,
   Drawer,
   Group,
+  Indicator,
   Menu,
   Modal,
   PasswordInput,
@@ -30,13 +30,52 @@ import {
   IconShoppingCart,
 } from "@tabler/icons-react";
 
+import { useCart } from "@/context/CartContext";
+
+const services = [
+  ["Exchange", "/exchange"],
+  ["Repair", "/repair"],
+  ["AOG Desk", "/aog-desk"],
+  ["Component Lease", "/component"],
+  ["Inventory Consignment Sales", "/inventory-sales"],
+  ["Logistics", "/logistics"],
+  ["Quality Control", "/quality-control"],
+  ["Surplus Parts Purchase", "/surplus-parts"],
+];
+
+const moreItems = [
+  ["About", "/about"],
+  ["Career", "/career"],
+  ["Contact", "/contact"],
+  ["Inventory", "/Inventory"],
+  ["Quality", "/quality"],
+  ["Relationships", "/relationships"],
+];
+
+const mobileItems = [
+  ["Who We Are", "/whoweare"],
+  ["Exchange", "/exchange"],
+  ["Repair", "/repair"],
+  ["Support", "/support"],
+  ["Quality", "/quality"],
+  ["Events", "/events"],
+  ["About", "/about"],
+  ["Careers", "/careers"],
+];
+
 export default function Navbar() {
   const [opened, setOpened] = useState(false);
   const [loginOpened, setLoginOpened] = useState(false);
 
+  const { cart } = useCart();
+
+  const cartCount = cart.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
+
   return (
     <>
-      {/* NAVBAR */}
       <header className="z-50 h-20 border-b border-gray-200 bg-white shadow-sm">
         <Container fluid className="h-full">
           <Group
@@ -48,7 +87,6 @@ export default function Navbar() {
           >
             {/* LEFT */}
             <Group gap="lg" align="center" wrap="nowrap">
-              {/* Logo */}
               <Image
                 src="https://gfa.aero/theme_golden_aviation/static/src/image%203.0/logo.svg"
                 alt="GFA Logo"
@@ -57,14 +95,14 @@ export default function Navbar() {
                 priority
               />
 
-              {/* DESKTOP NAVIGATION */}
+              {/* DESKTOP MENU */}
               <Group
                 gap="lg"
                 visibleFrom="md"
                 align="center"
                 wrap="nowrap"
               >
-                <Link href="/whoweare" style={{ textDecoration: "none" }}>
+                <Link href="/whoweare" className="no-underline">
                   <Text fw={500} size="sm">
                     Who We Are
                   </Text>
@@ -75,7 +113,6 @@ export default function Navbar() {
                   <Menu.Target>
                     <Group
                       gap={4}
-                      align="center"
                       style={{ cursor: "pointer" }}
                     >
                       <Text fw={500} size="sm">
@@ -86,56 +123,25 @@ export default function Navbar() {
                   </Menu.Target>
 
                   <Menu.Dropdown>
-                    <Menu.Item component={Link} href="/exchange">
-                      Exchange
-                    </Menu.Item>
-
-                    <Menu.Item component={Link} href="/repair">
-                      Repair
-                    </Menu.Item>
-
-                    <Menu.Item component={Link} href="/aog-desk">
-                      AOG Desk
-                    </Menu.Item>
-
-                    <Menu.Item component={Link} href="/component">
-                      Component Lease
-                    </Menu.Item>
-
-                    <Menu.Item
-                      component={Link}
-                      href="/inventory-sales"
-                    >
-                      Inventory Consignment Sales
-                    </Menu.Item>
-
-                    <Menu.Item component={Link} href="/logistics">
-                      Logistics
-                    </Menu.Item>
-
-                    <Menu.Item
-                      component={Link}
-                      href="/quality-control"
-                    >
-                      Quality Control
-                    </Menu.Item>
-
-                    <Menu.Item
-                      component={Link}
-                      href="/surplus-parts"
-                    >
-                      Surplus Parts Purchase
-                    </Menu.Item>
+                    {services.map(([name, href]) => (
+                      <Menu.Item
+                        key={href}
+                        component={Link}
+                        href={href}
+                      >
+                        {name}
+                      </Menu.Item>
+                    ))}
                   </Menu.Dropdown>
                 </Menu>
 
-                <Link href="/quality" style={{ textDecoration: "none" }}>
+                <Link href="/quality" className="no-underline">
                   <Text fw={500} size="sm">
                     Quality
                   </Text>
                 </Link>
 
-                <Link href="/events" style={{ textDecoration: "none" }}>
+                <Link href="/events" className="no-underline">
                   <Text size="sm">Events</Text>
                 </Link>
 
@@ -144,10 +150,12 @@ export default function Navbar() {
                   <Menu.Target>
                     <Group
                       gap={4}
-                      align="center"
                       style={{ cursor: "pointer" }}
                     >
-                      <IconPlus size={14} color="#0B7A3E" />
+                      <IconPlus
+                        size={14}
+                        color="#0B7A3E"
+                      />
                       <Text fw={500} size="sm">
                         More
                       </Text>
@@ -155,32 +163,15 @@ export default function Navbar() {
                   </Menu.Target>
 
                   <Menu.Dropdown>
-                    <Menu.Item component={Link} href="/about">
-                      About
-                    </Menu.Item>
-
-                    <Menu.Item component={Link} href="/career">
-                      Career
-                    </Menu.Item>
-
-                    <Menu.Item component={Link} href="/contact">
-                      Contact
-                    </Menu.Item>
-
-                    <Menu.Item component={Link} href="/Inventory">
-                      Inventory
-                    </Menu.Item>
-
-                    <Menu.Item component={Link} href="/quality">
-                      Quality
-                    </Menu.Item>
-
-                    <Menu.Item
-                      component={Link}
-                      href="/relationships"
-                    >
-                      Relationships
-                    </Menu.Item>
+                    {moreItems.map(([name, href]) => (
+                      <Menu.Item
+                        key={href}
+                        component={Link}
+                        href={href}
+                      >
+                        {name}
+                      </Menu.Item>
+                    ))}
                   </Menu.Dropdown>
                 </Menu>
               </Group>
@@ -193,7 +184,6 @@ export default function Navbar() {
               align="center"
               wrap="nowrap"
             >
-              {/* LinkedIn */}
               <ActionIcon
                 color="green"
                 variant="filled"
@@ -204,7 +194,6 @@ export default function Navbar() {
                 <IconBrandLinkedin size={16} />
               </ActionIcon>
 
-              {/* Phone */}
               <ActionIcon
                 color="green"
                 variant="filled"
@@ -215,30 +204,38 @@ export default function Navbar() {
                 <IconPhone size={16} />
               </ActionIcon>
 
-              {/* AOG DESK */}
               <Text
                 fw={500}
                 size="sm"
                 component={Link}
                 href="/aog-desk"
-                style={{ textDecoration: "none" }}
+                className="no-underline"
               >
                 AOG Desk
               </Text>
 
               {/* CART */}
-              <ActionIcon
-                component={Link}
-                href="/cart"
-                variant="subtle"
-                color="dark"
-                size="md"
-                aria-label="Shopping cart"
+              <Indicator
+                label={cartCount}
+                size={18}
+                color="green"
+                disabled={cartCount === 0}
+                offset={4}
+                withBorder
               >
-                <IconShoppingCart size={20} />
-              </ActionIcon>
+                <ActionIcon
+                  component={Link}
+                  href="/cart"
+                  variant="subtle"
+                  color="dark"
+                  size="md"
+                  aria-label="Shopping cart"
+                >
+                  <IconShoppingCart size={20} />
+                </ActionIcon>
+              </Indicator>
 
-              {/* GFA LOGIN */}
+              {/* LOGIN */}
               <Group
                 gap={6}
                 align="center"
@@ -261,20 +258,19 @@ export default function Navbar() {
               </Group>
             </Group>
 
-            {/* MOBILE MENU */}
-            <Burger
+            {/* MOBILE BUTTON */}
+            <ActionIcon
               hiddenFrom="md"
-              opened={opened}
-              onClick={() => setOpened(!opened)}
-              aria-label={
-                opened ? "Close navigation menu" : "Open navigation menu"
-              }
-            />
+              variant="subtle"
+              onClick={() => setOpened(true)}
+            >
+              <Text size="xl">☰</Text>
+            </ActionIcon>
           </Group>
         </Container>
       </header>
 
-      {/* MOBILE DRAWER */}
+      {/* MOBILE MENU */}
       <Drawer
         opened={opened}
         onClose={() => setOpened(false)}
@@ -282,20 +278,11 @@ export default function Navbar() {
         padding="md"
       >
         <Stack gap="md">
-          {[
-            { label: "Who We Are", href: "/whoweare" },
-            { label: "Exchange", href: "/exchange" },
-            { label: "Repair", href: "/repair" },
-            { label: "Support", href: "/support" },
-            { label: "Quality", href: "/quality" },
-            { label: "Events", href: "/events" },
-            { label: "About", href: "/about" },
-            { label: "Careers", href: "/careers" },
-          ].map((item) => (
+          {mobileItems.map(([label, href]) => (
             <Text
-              key={item.href}
+              key={href}
               component={Link}
-              href={item.href}
+              href={href}
               fw={600}
               size="md"
               style={{
@@ -305,7 +292,7 @@ export default function Navbar() {
               }}
               onClick={() => setOpened(false)}
             >
-              {item.label}
+              {label}
             </Text>
           ))}
 
@@ -323,11 +310,6 @@ export default function Navbar() {
         title="Sign In to Continue"
         size={440}
         radius="md"
-        padding={16}
-        overlayProps={{
-          backgroundOpacity: 0.55,
-          blur: 1,
-        }}
       >
         <Stack gap="md">
           <Text size="sm" c="dimmed">
@@ -336,7 +318,7 @@ export default function Navbar() {
 
           <Text size="sm">
             New to GFA?{" "}
-            <Anchor href="/signup" c="green" fw={500}>
+            <Anchor href="/signup" c="green">
               Sign up
             </Anchor>
           </Text>
@@ -354,14 +336,21 @@ export default function Navbar() {
           />
 
           <Group justify="space-between">
-            <Checkbox label="Remember me" size="sm" />
+            <Checkbox
+              label="Remember me"
+              size="sm"
+            />
 
-            <Anchor href="/forgot-password" c="green" size="sm">
+            <Anchor
+              href="/forgot-password"
+              c="green"
+              size="sm"
+            >
               Forgot password?
             </Anchor>
           </Group>
 
-          <Button fullWidth color="green" mt="md">
+          <Button fullWidth color="green">
             Sign In
           </Button>
         </Stack>
