@@ -1,12 +1,12 @@
 import Layout from "@/components/Layout";
-import QualityBanner from "./components/QualityBanner";
-import QualitySection from "./components/QualitySection";
-import CertificateSection from "./components/CertificateSection";
-import Footer from "../whoweare/components/Footer";
+import QualityBanner from "../../features/components/QualityBanner";
+import QualitySection from "../../features/components/QualitySection";
+import CertificateSection from "../../features/components/QualityCertificateSection";
+import Footer from "../../features/components/Footer";
 
 
 
-export default function ExchangePage() {
+export default function QualityPage() {
   return (
     <Layout>
       <QualityBanner/>

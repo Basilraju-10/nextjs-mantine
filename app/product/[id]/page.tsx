@@ -17,7 +17,7 @@ import {
 
 import Layout from "@/components/Layout";
 import { getProduct } from "@/lib/api";
-import Footer from "@/app/whoweare/components/Footer";
+import Footer from "@/features/components/Footer";
 import ProductActions from "@/components/ProductActions";
 
 interface ProductPageProps {

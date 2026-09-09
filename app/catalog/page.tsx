@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
-import CatalogView from "./components/CatalogView";
-import Footer from "../whoweare/components/Footer";
+import CatalogView from "../../features/components/CatalogView";
+import Footer from "../../features/components/Footer";
 
 export default function CatalogPage() {
 

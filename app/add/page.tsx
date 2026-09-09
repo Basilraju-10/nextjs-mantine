@@ -1,7 +1,7 @@
 
 import Layout from "@/components/Layout";
-import Footer from "../whoweare/components/Footer";
-import AddProduct from "./components/AddProduct";
+import Footer from "../../features/components/Footer";
+import AddProduct from "../../features/components/AddProduct";
 
 export default function AddPage() {
   return (

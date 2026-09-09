@@ -1,22 +1,20 @@
 import Layout from "@/components/Layout";
-import Banner from "./components/Banner";
-import UnlockingValue from "./components/UnlockingValue";
-import AviationParts from "./components/AvationParts";
-import LatestNews from "./components/LatestNews";
-import FAQSection from "./components/FAQSection";
-import Footer from "@/app/whoweare/components/Footer";
 
+import Footer from "@/features/components/Footer";
+import Banner from "../../features/components/ExchangeBanner";
+import UnlockingValue from "../../features/components/ExchangeUnlockingValue";
+import AviationParts from "../../features/components/ExchangeAviationParts";
+import LatestNews from "../../features/components/ExchangeLatestNews";
+import FAQSection from "../../features/components/ExchangeFAQSection";
 
-
-
-export default function ExchangePage() {
+export default function InventorySalesPage() {
   return (
     <Layout>
       <Banner/>
-      <UnlockingValue/> 
-      <AviationParts/> 
-      <FAQSection/>
-     < LatestNews/>
+        <UnlockingValue/> 
+        <AviationParts/> 
+        <FAQSection/>
+      < LatestNews/>
      < Footer/>
     </Layout>
   );

@@ -1,9 +1,9 @@
 import Layout from "@/components/Layout";
-import Footer from "../whoweare/components/Footer";
-import ContactBanner from "./components/ContactBanner";
-import OfficeLocation from "../career/components/OfficeLocation";
-import FAQSection from "../exchange/components/FAQSection";
-import ContactSection from "./components/ContactSection";
+import Footer from "../../features/components/Footer";
+import ContactBanner from "../../features/components/ContactBanner";
+import OfficeLocation from "../../features/components/OfficeLocation";
+import FAQSection from "../../features/components/ExchangeFAQSection";
+import ContactSection from "../../features/components/ContactSection";
 
 
 

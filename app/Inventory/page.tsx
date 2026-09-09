@@ -1,9 +1,9 @@
 
 import Layout from "@/components/Layout";
-import Footer from "../whoweare/components/Footer";
-import InventorySection from "./components/InventorySection";
-import InventoryBanner from "./components/InventoryBanner";
-import InventoryNames from "./components/InventoryNames";
+import Footer from "../../features/components/Footer";
+import InventorySection from "../../features/components/InventorySection";
+import InventoryBanner from "../../features/components/InventoryBanner";
+import InventoryNames from "../../features/components/InventoryNames";
 
 
 

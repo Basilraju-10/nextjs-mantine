@@ -1,9 +1,9 @@
 
 import Layout from "@/components/Layout";
-import Footer from "../whoweare/components/Footer";
-import RelastionshipBanner from "./components/RelationshipBanner";
-import RelationshipSection from "./components/RealtionshipSection";
-import RelationshipCertificateSection from "./components/RelationshipCertificateSection";
+import Footer from "../../features/components/Footer";
+import RelastionshipBanner from "../../features/components/RelationshipBanner";
+import RelationshipSection from "../../features/components/RealtionshipSection";
+import RelationshipCertificateSection from "../../features/components/RelationshipCertificateSection";
 
 
 

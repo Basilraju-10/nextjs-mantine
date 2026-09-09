@@ -1,15 +1,15 @@
 import Layout from "@/components/Layout";
-import Banner from "./components/Banner";
-import UnlockingValue from "./components/UnlockingValue";
-import AviationParts from "./components/AvationParts";
-import LatestNews from "./components/LatestNews";
-import FAQSection from "./components/FAQSection";
-import Footer from "@/app/whoweare/components/Footer";
+import Banner from "../../features/components/SurplusBanner";
+import UnlockingValue from "../../features/components/SurplusUnlockingValue";
+import AviationParts from "../../features/components/SurplusAvationParts";
+import LatestNews from "../../features/components/SurplusLatestNews";
+import FAQSection from "../../features/components/SurplusFAQSection";
+import Footer from "@/features/components/Footer";
 
 
 
 
-export default function ExchangePage() {
+export default function SurplusPartsPage() {
   return (
     <Layout>
       <Banner/>

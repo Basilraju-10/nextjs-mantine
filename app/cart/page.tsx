@@ -1,7 +1,7 @@
 
 import Layout from "@/components/Layout";
-import Footer from "../whoweare/components/Footer";
-import CartPage from "./components/cartpage";
+import Footer from "../../features/components/Footer";
+import CartPage from "../../features/components/cartpage";
 
 export default function Cart() {
 

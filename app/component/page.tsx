@@ -1,10 +1,10 @@
 import Layout from "@/components/Layout";
-import Banner from "./components/Banner";
-import UnlockingValue from "./components/UnlockingValue";
-import AviationParts from "./components/AvationParts";
-import LatestNews from "./components/LatestNews";
-import FAQSection from "./components/FAQSection";
-import Footer from "@/app/whoweare/components/Footer";
+import Footer from "@/features/components/Footer";
+import ComponentBanner from "../../features/components/ComponentBanner";
+import ComponentLatestNews from "../../features/components/ComponentLatestNews";
+import ComponentFAQSection from "../../features/components/ComponentFAQSection";
+import ComponentUnlockingValue from "../../features/components/ComponentUnlockingValue";
+import ComponentAviationParts from "../../features/components/ComponentAvationParts";
 
 
 
@@ -12,11 +12,11 @@ import Footer from "@/app/whoweare/components/Footer";
 export default function ExchangePage() {
   return (
     <Layout>
-      <Banner/>
-      <UnlockingValue/> 
-      <AviationParts/> 
-      <FAQSection/>
-     < LatestNews/>
+      <ComponentBanner/>
+      <ComponentUnlockingValue/> 
+      <ComponentAviationParts/> 
+      <ComponentFAQSection/>
+     < ComponentLatestNews/>
      < Footer/>
     </Layout>
   );

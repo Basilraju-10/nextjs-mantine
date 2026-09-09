@@ -1,22 +1,22 @@
 import Layout from "@/components/Layout";
-import Banner from "./components/Banner";
-import UnlockingValue from "./components/UnlockingValue";
-import AviationParts from "./components/AvationParts";
-import LatestNews from "./components/LatestNews";
-import FAQSection from "./components/FAQSection";
-import Footer from "@/app/whoweare/components/Footer";
+
+import Footer from "@/features/components/Footer";
+import LogisticsLatestNews from "../../features/components/LogisticsLatestNews";
+import LogisticsFAQSection from "../../features/components/LogisticsFAQSection";
+import LogisticsBanner from "../../features/components/LogisticsBanner";
+import LogisticsUnlockingValue from "../../features/components/LogisticsUnlockingValue";
+import LogisticsAviationParts from "../../features/components/LogisticsAviationParts";  
 
 
 
-
-export default function ExchangePage() {
+export default function LogisticsPage() {
   return (
     <Layout>
-      <Banner/>
-      <UnlockingValue/> 
-      <AviationParts/> 
-      <FAQSection/>
-     < LatestNews/>
+      <LogisticsBanner/>
+      <LogisticsUnlockingValue/> 
+      <LogisticsAviationParts/> 
+      <LogisticsFAQSection/>
+     < LogisticsLatestNews/>
      < Footer/>
     </Layout>
   );

@@ -7,7 +7,7 @@ import {
   Title,
 } from "@mantine/core";
 
-import AircraftPartCard from "./AircraftPartCard";
+import AircraftPartCard from "./MainAircraftPartCard";
 
 const values = [
   {

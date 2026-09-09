@@ -1,18 +1,14 @@
 import Layout from "@/components/Layout";
-import Banner from "./components/Banner";
-import UnlockingValue from "./components/UnlockingValue";
-import AviationParts from "./components/AvationParts";
-import LatestNews from "./components/LatestNews";
-import FAQSection from "./components/FAQSection";
-import Footer from "@/app/whoweare/components/Footer";
-
-
-
-
-export default function ExchangePage() {
+import UnlockingValue from "../../features/components/QualitycontrolUnlockingValue";
+import AviationParts from "../../features/components/QualitycontrolAvationParts";
+import LatestNews from "../../features/components/QulaityconrolLatestNews";
+import FAQSection from "../../features/components/QualitycontrolFAQSection";
+import Footer from "@/features/components/Footer";
+import QualitycontrolBanner from "../../features/components/QualitycontrolBanner";
+export default function QualityControlPage() {
   return (
     <Layout>
-      <Banner/>
+      <QualitycontrolBanner/>
       <UnlockingValue/> 
       <AviationParts/> 
       <FAQSection/>
