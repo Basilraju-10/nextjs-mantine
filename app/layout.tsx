@@ -1,5 +1,5 @@
 import "./globals.css";
-import Providers from "@/components/Providers";
+import Providers from "@/components/layout/Providers";
 import { Plus_Jakarta_Sans } from "next/font/google";
 
 const plusJakarta = Plus_Jakarta_Sans({

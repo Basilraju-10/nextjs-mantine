@@ -1,10 +1,10 @@
 "use client";
 
 import FeaturedProducts from "@/components/home/FeaturedProducts";
-import Layout from "@/components/Layout";
+import Layout from "@/components/layout/Layout";
 import SearchLanding from "@/components/SearchLanding";
-import ServicesSection from "../features/components/MainServicesSection";
-import Footer from "../features/components/Footer";
+import ServicesSection from "../features/components/WhowearePage/MainServicesSection";
+import Footer from "../features/components/AogDeskPage/Footer";
 import AboutUs from "./AboutUs";
 import ClientsSection from "@/components/ClientsSection";
 import LatestNews from "@/components/LatestNews";

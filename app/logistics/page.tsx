@@ -1,12 +1,11 @@
-import Layout from "@/components/Layout";
+import Layout from "@/components/layout/Layout";
 
-import Footer from "@/features/components/Footer";
-import LogisticsLatestNews from "../../features/components/LogisticsLatestNews";
-import LogisticsFAQSection from "../../features/components/LogisticsFAQSection";
-import LogisticsBanner from "../../features/components/LogisticsBanner";
-import LogisticsUnlockingValue from "../../features/components/LogisticsUnlockingValue";
-import LogisticsAviationParts from "../../features/components/LogisticsAviationParts";  
-
+import Footer from "@/features/components/AogDeskPage/Footer";
+import LogisticsLatestNews from "../../features/components/LogisticsPage/LogisticsLatestNews";
+import LogisticsFAQSection from "../../features/components/LogisticsPage/LogisticsFAQSection";
+import LogisticsBanner from "../../features/components/LogisticsPage/LogisticsBanner";
+import LogisticsUnlockingValue from "../../features/components/LogisticsPage/LogisticsUnlockingValue";
+import LogisticsAviationParts from "../../features/components/LogisticsPage/LogisticsAviationParts";
 
 
 export default function LogisticsPage() {

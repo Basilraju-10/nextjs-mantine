@@ -1,23 +1,22 @@
-import Layout from "@/components/Layout";
-import Banner from "../../features/components/Banner";
-import UnlockingValue from "../../features/components/UnlockingValue";
-import AviationParts from "../../features/components/AvationParts";
-import LatestNews from "../../features/components/LatestNews";
-import FAQSection from "../../features/components/FAQSection";
-import Footer from "@/features/components/Footer";
+
+import Layout from "@/components/layout/Layout";
+import Footer from "../../features/components/AogDeskPage/Footer";
+import Banner from "@/features/components/AogDeskPage/Banner";
+import UnlockingValue from "@/features/components/AogDeskPage/UnlockingValue";
+import AviationParts from "@/features/components/AogDeskPage/AvationParts";
+import FAQSection from "@/features/components/AogDeskPage/FAQSection";
+import LatestNews from "@/features/components/AogDeskPage/FAQSection";
 
 
-
-
-export default function ExchangePage() {
+export default function AddPage() {
   return (
     <Layout>
-      <Banner/>
-      <UnlockingValue/> 
-      <AviationParts/> 
-      <FAQSection/>
-     < LatestNews/>
-     < Footer/>
+        <Banner/>
+        <UnlockingValue/>
+        <AviationParts/>
+        <FAQSection/>
+        <LatestNews/>
+      <Footer/>
     </Layout>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import Layout from "@/components/Layout";
-import CatalogView from "../../features/components/CatalogView";
-import Footer from "../../features/components/Footer";
+import Layout from "@/components/layout/Layout";
+import CatalogView from "../../features/components/CatalogPage/CatalogView";
+import Footer from "../../features/components/AogDeskPage/Footer";
 
 export default function CatalogPage() {
 

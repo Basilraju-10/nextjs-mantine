@@ -1,20 +1,21 @@
-import Layout from "@/components/Layout";
+import Layout from "@/components/layout/Layout";
 
-import Footer from "@/features/components/Footer";
-import Banner from "../../features/components/ExchangeBanner";
-import UnlockingValue from "../../features/components/ExchangeUnlockingValue";
-import AviationParts from "../../features/components/ExchangeAviationParts";
-import LatestNews from "../../features/components/ExchangeLatestNews";
-import FAQSection from "../../features/components/ExchangeFAQSection";
+import Footer from "@/features/components/AogDeskPage/Footer";
+import InventorysalesBanner from "@/features/components/InventorySalesPage/InventorysalesBanner";
+import InventorysalesUnlockingValue from "@/features/components/InventorySalesPage/InventorysalesUnlockingValue";
+
+import InventorysalesFAQSection from "@/features/components/InventorySalesPage/InventorysalesFAQSection";
+import InventorysalesLatestNews from "@/features/components/InventorySalesPage/InventorysalesLatestNews";
+import InventorysalesAvationParts from "@/features/components/InventorySalesPage/InventorysalesAvationParts";
 
 export default function InventorySalesPage() {
   return (
     <Layout>
-      <Banner/>
-        <UnlockingValue/> 
-        <AviationParts/> 
-        <FAQSection/>
-      < LatestNews/>
+      <InventorysalesBanner/>
+      <InventorysalesUnlockingValue/>
+        <InventorysalesAvationParts/> 
+        <InventorysalesFAQSection/>
+      < InventorysalesLatestNews/>
      < Footer/>
     </Layout>
   );

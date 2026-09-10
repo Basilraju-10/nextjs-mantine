@@ -1,7 +1,7 @@
 
-import Layout from "@/components/Layout";
-import Footer from "../../features/components/Footer";
-import AddProduct from "../../features/components/AddProduct";
+import Layout from "@/components/layout/Layout";
+import Footer from "../../features/components/AogDeskPage/Footer";
+import AddProduct from "../../features/components/AddProductPage/AddProduct";
 
 export default function AddPage() {
   return (

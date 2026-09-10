@@ -1,9 +1,9 @@
-import Layout from "@/components/Layout";
-import Footer from "../../features/components/Footer";
-import ContactBanner from "../../features/components/ContactBanner";
-import OfficeLocation from "../../features/components/OfficeLocation";
-import FAQSection from "../../features/components/ExchangeFAQSection";
-import ContactSection from "../../features/components/ContactSection";
+import Layout from "@/components/layout/Layout";
+import Footer from "../../features/components/AogDeskPage/Footer";
+import ContactBanner from "../../features/components/ContactPage/ContactBanner";
+import OfficeLocation from "../../features/components/CareerPage/OfficeLocation";
+import FAQSection from "../../features/components/ExchangePage/ExchangeFAQSection";
+import ContactSection from "../../features/components/ContactPage/ContactSection";
 
 
 

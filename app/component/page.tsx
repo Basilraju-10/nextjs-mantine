@@ -1,10 +1,10 @@
-import Layout from "@/components/Layout";
-import Footer from "@/features/components/Footer";
-import ComponentBanner from "../../features/components/ComponentBanner";
-import ComponentLatestNews from "../../features/components/ComponentLatestNews";
-import ComponentFAQSection from "../../features/components/ComponentFAQSection";
-import ComponentUnlockingValue from "../../features/components/ComponentUnlockingValue";
-import ComponentAviationParts from "../../features/components/ComponentAvationParts";
+import Layout from "@/components/layout/Layout";
+import Footer from "@/features/components/AogDeskPage/Footer";
+import ComponentBanner from "../../features/components/ComponentPage/ComponentBanner";
+import ComponentLatestNews from "../../features/components/ComponentPage/ComponentLatestNews";
+import ComponentFAQSection from "../../features/components/ComponentPage/ComponentFAQSection";
+import ComponentUnlockingValue from "../../features/components/ComponentPage/ComponentUnlockingValue";
+import ComponentAviationParts from "../../features/components/ComponentPage/ComponentAvationParts";
 
 
 

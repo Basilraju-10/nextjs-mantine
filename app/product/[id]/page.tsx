@@ -15,9 +15,9 @@ import {
   Title,
 } from "@mantine/core";
 
-import Layout from "@/components/Layout";
+import Layout from "@/components/layout/Layout";
 import { getProduct } from "@/lib/api";
-import Footer from "@/features/components/Footer";
+import Footer from "@/features/components/AogDeskPage/Footer";
 import ProductActions from "@/components/ProductActions";
 
 interface ProductPageProps {

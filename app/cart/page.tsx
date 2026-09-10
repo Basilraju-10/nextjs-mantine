@@ -1,7 +1,7 @@
 
-import Layout from "@/components/Layout";
-import Footer from "../../features/components/Footer";
-import CartPage from "../../features/components/cartpage";
+import Layout from "@/components/layout/Layout";
+import Footer from "../../features/components/AogDeskPage/Footer";
+import CartPage from "../../features/components/CartPage/cartpage";
 
 export default function Cart() {
 

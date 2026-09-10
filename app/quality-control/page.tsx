@@ -1,10 +1,10 @@
-import Layout from "@/components/Layout";
-import UnlockingValue from "../../features/components/QualitycontrolUnlockingValue";
-import AviationParts from "../../features/components/QualitycontrolAvationParts";
-import LatestNews from "../../features/components/QulaityconrolLatestNews";
-import FAQSection from "../../features/components/QualitycontrolFAQSection";
-import Footer from "@/features/components/Footer";
-import QualitycontrolBanner from "../../features/components/QualitycontrolBanner";
+import Layout from "@/components/layout/Layout";
+import UnlockingValue from "../../features/components/QualityControlPage/QualitycontrolUnlockingValue";
+import AviationParts from "../../features/components/QualityControlPage/QualitycontrolAvationParts";
+import LatestNews from "../../features/components/QualityControlPage/QulaityconrolLatestNews";
+import FAQSection from "../../features/components/QualityControlPage/QualitycontrolFAQSection";
+import Footer from "@/features/components/AogDeskPage/Footer";
+import QualitycontrolBanner from "../../features/components/QualityControlPage/QualitycontrolBanner";
 export default function QualityControlPage() {
   return (
     <Layout>

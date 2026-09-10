@@ -1,11 +1,11 @@
-import Layout from "@/components/Layout";
-import HeroBanner from "../../features/components/MainHeroBanner";
-import AboutSection from "../../features/components/MainAboutSection";
-import OurValues from "../../features/components/MainOurValues";
-import OurStory from "../../features/components/MainOurStory";
-import LeadershipTeam from "../../features/components/MainLeadershipTeam";
-import ServicesSection from "../../features/components/MainServicesSection";
-import Footer from "../../features/components/Footer";
+import Layout from "@/components/layout/Layout";
+import HeroBanner from "../../features/components/WhowearePage/MainHeroBanner";
+import AboutSection from "../../features/components/WhowearePage/MainAboutSection";
+import OurValues from "../../features/components/WhowearePage/MainOurValues";
+import OurStory from "../../features/components/WhowearePage/MainOurStory";
+import LeadershipTeam from "../../features/components/WhowearePage/MainLeadershipTeam";
+import ServicesSection from "../../features/components/WhowearePage/MainServicesSection";
+import Footer from "../../features/components/AogDeskPage/Footer";
 
 
 
