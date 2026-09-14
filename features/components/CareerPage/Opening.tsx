@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, Container, SimpleGrid } from "@mantine/core";
-import NewCard from "@/components/NewCard";
+import NewCard from "@/components/ui/components/NewCard";
 
 const services = [
   {

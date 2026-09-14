@@ -12,9 +12,9 @@ import {
 
 import SearchTabs from "./Searchtabs";
 
-import PasteForm from "./SearchForms/PasteForm";
-import UploadForm from "./SearchForms/UploadForm";
-import MROSearchForm from "./SearchForms/MROSearchForm";
+import PasteForm from "../SearchForms/PasteForm";
+import UploadForm from "../SearchForms/UploadForm";
+import MROSearchForm from "../SearchForms/MROSearchForm";
 
 export default function SearchLanding() {
   const [searchMode, setSearchMode] = useState("paste");

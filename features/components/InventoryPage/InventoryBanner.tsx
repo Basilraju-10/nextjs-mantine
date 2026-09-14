@@ -1,4 +1,4 @@
-import PageBanner from "@/components/PageBanner";
+import PageBanner from "@/components/ui/components/PageBanner";
 
 export default function InventoryBanner() {
   return (

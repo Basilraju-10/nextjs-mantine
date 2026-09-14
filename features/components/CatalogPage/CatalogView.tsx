@@ -16,8 +16,8 @@ import {
 import { getProducts } from "@/lib/api";
 import { Product } from "@/types/product";
 
-import ProductListCard from "@/components/ProductListCard";
-import ProductCard from "@/components/ProductCard";
+import ProductListCard from "@/components/ui/components/ProductListCard";
+import ProductCard from "@/components/ui/components/ProductCard";
 import SearchBar from "@/components/layout/SearchBar";
 import Sidebar from "@/components/layout/Sidebar";
 
