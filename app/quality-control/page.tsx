@@ -3,7 +3,7 @@ import UnlockingValue from "../../features/components/QualityControlPage/Quality
 import AviationParts from "../../features/components/QualityControlPage/QualitycontrolAvationParts";
 import LatestNews from "../../features/components/QualityControlPage/QulaityconrolLatestNews";
 import FAQSection from "../../features/components/QualityControlPage/QualitycontrolFAQSection";
-import Footer from "@/features/components/AogDeskPage/Footer";
+import Footer from "@/components/ui/Footer";
 import QualitycontrolBanner from "../../features/components/QualityControlPage/QualitycontrolBanner";
 export default function QualityControlPage() {
   return (

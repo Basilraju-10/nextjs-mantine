@@ -4,7 +4,7 @@ import UnlockingValue from "../../features/components/SurplusPartsPage/SurplusUn
 import AviationParts from "../../features/components/SurplusPartsPage/SurplusAvationParts";
 import LatestNews from "../../features/components/SurplusPartsPage/SurplusLatestNews";
 import FAQSection from "../../features/components/SurplusPartsPage/SurplusFAQSection";
-import Footer from "@/features/components/AogDeskPage/Footer";
+import Footer from "@/components/ui/Footer";
 
 
 

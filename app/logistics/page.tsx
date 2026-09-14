@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 
-import Footer from "@/features/components/AogDeskPage/Footer";
+import Footer from "@/components/ui/Footer";
 import LogisticsLatestNews from "../../features/components/LogisticsPage/LogisticsLatestNews";
 import LogisticsFAQSection from "../../features/components/LogisticsPage/LogisticsFAQSection";
 import LogisticsBanner from "../../features/components/LogisticsPage/LogisticsBanner";

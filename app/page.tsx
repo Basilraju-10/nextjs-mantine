@@ -1,19 +1,18 @@
 "use client";
 
-import FeaturedProducts from "@/components/ui/home/FeaturedProducts";
+import FeaturedProducts from "@/features/components/MainPage/FeaturedProducts";
 import Layout from "@/components/layout/Layout";
-import SearchLanding from "@/components/ui/components/SearchLanding";
+import SearchLanding from "@/features/components/MainPage/SearchLanding";
 import ServicesSection from "../features/components/WhowearePage/MainServicesSection";
-import Footer from "../features/components/AogDeskPage/Footer";
+import Footer from "../components/ui/Footer";
 import AboutUs from "./AboutUs";
-import ClientsSection from "@/components/ui/components/ClientsSection";
-import LatestNews from "@/components/ui/components/LatestNews";
+import ClientsSection from "@/features/components/MainPage/ClientsSection";
+import LatestNews from "@/components/ui/LatestNews";
 
 export default function HomePage() {
   return (
     <Layout>
       <SearchLanding />
-
       <FeaturedProducts/>
       <AboutUs/>
       <ClientsSection/>

@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import Footer from "@/features/components/AogDeskPage/Footer";
+import Footer from "@/components/ui/Footer";
 import ExchangeLatestNews from "../../features/components/ExchangePage/ExchangeLatestNews";
 import ExchangeFAQSection from "../../features/components/ExchangePage/ExchangeFAQSection";
 import ExchangeBanner from "../../features/components/ExchangePage/ExchangeBanner";

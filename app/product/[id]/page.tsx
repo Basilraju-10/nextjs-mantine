@@ -17,8 +17,8 @@ import {
 
 import Layout from "@/components/layout/Layout";
 import { getProduct } from "@/lib/api";
-import Footer from "@/features/components/AogDeskPage/Footer";
-import ProductActions from "@/components/ui/components/ProductActions";
+import Footer from "@/components/ui/Footer";
+import ProductActions from "@/features/components/CatalogPage/ProductActions";
 
 interface ProductPageProps {
   params: Promise<{

@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import Footer from "../../features/components/AogDeskPage/Footer";
+import Footer from "../../components/ui/Footer";
 import CareerBanner from "../../features/components/CareerPage/CareerBanner";
 import Opening from "../../features/components/CareerPage/Opening";
 import OfficeLocation from "../../features/components/CareerPage/OfficeLocation";

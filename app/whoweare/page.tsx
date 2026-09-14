@@ -5,7 +5,7 @@ import OurValues from "../../features/components/WhowearePage/MainOurValues";
 import OurStory from "../../features/components/WhowearePage/MainOurStory";
 import LeadershipTeam from "../../features/components/WhowearePage/MainLeadershipTeam";
 import ServicesSection from "../../features/components/WhowearePage/MainServicesSection";
-import Footer from "../../features/components/AogDeskPage/Footer";
+import Footer from "../../components/ui/Footer";
 
 
 

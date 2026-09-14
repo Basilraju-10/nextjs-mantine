@@ -4,7 +4,7 @@ import UnlockingValue from "../../features/components/RepairPage/RepairUnlocking
 import AviationParts from "../../features/components/RepairPage/RepairAvationParts";
 import LatestNews from "../../features/components/RepairPage/RepairtLatestNews";
 import FAQSection from "../../features/components/RepairPage/RepairFAQSection";
-import Footer from "@/features/components/AogDeskPage/Footer";
+import Footer from "@/components/ui/Footer";
 
 
 
