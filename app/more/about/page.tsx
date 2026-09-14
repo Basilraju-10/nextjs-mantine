@@ -1,5 +1,5 @@
 
-import WhoWeArePage from "../whoweare/page";
+import WhoWeArePage from "../../whoweare/page";
 
 
 
