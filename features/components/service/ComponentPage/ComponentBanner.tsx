@@ -1,5 +1,6 @@
-import PageBanner from "@/components/ui/components/PageBanner";
+import PageBanner from "@/components/ui/PageBanner";
 
+ 
 
 export default function AogBanner() {
   return (

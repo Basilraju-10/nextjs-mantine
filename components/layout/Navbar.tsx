@@ -33,34 +33,32 @@ import {
 import { useCart } from "@/context/CartContext";
 
 const services = [
-  ["Exchange", "/exchange"],
-  ["Repair", "/repair"],
-  ["AOG Desk", "/aog-desk"],
-  ["Component Lease", "/component"],
-  ["Inventory Consignment Sales", "/inventory-sales"],
-  ["Logistics", "/logistics"],
-  ["Quality Control", "/quality-control"],
-  ["Surplus Parts Purchase", "/surplus-parts"],
+  ["Exchange", "/services/exchange"],
+  ["Repair", "/services/repair"],
+  ["AOG Desk", "/services/aog-desk"],
+  ["Component Lease", "/services/component"],
+  ["Inventory Consignment Sales", "/services/inventory-sales"],
+  ["Logistics", "/services/logistics"],
+  ["Quality Control", "/services/quality-control"],
+  ["Surplus Parts Purchase", "/services/surplus-parts"],
 ];
 
 const moreItems = [
-  ["About", "/about"],
-  ["Career", "/career"],
-  ["Contact", "/contact"],
-  ["Inventory", "/Inventory"],
-  ["Quality", "/quality"],
-  ["Relationships", "/relationships"],
+  ["About", "/more/about"],
+  ["Career", "/more/career"],
+  ["Contact", "/more/contact"],
+  ["Inventory", "/more/Inventory"],
+  ["Quality", "/more/quality"],
+  ["Relationships", "/more/relationships"],
 ];
 
 const mobileItems = [
   ["Who We Are", "/whoweare"],
-  ["Exchange", "/exchange"],
-  ["Repair", "/repair"],
-  ["Support", "/support"],
   ["Quality", "/quality"],
   ["Events", "/events"],
-  ["About", "/about"],
-  ["Careers", "/careers"],
+  ["About", "/more/about"],
+  ["Career", "/more/career"],
+  ["Contact", "/more/contact"],
 ];
 
 export default function Navbar() {
@@ -76,6 +74,7 @@ export default function Navbar() {
 
   return (
     <>
+      {/* HEADER */}
       <header className="z-50 h-20 border-b border-gray-200 bg-white shadow-sm">
         <Container fluid className="h-full">
           <Group
@@ -87,13 +86,16 @@ export default function Navbar() {
           >
             {/* LEFT */}
             <Group gap="lg" align="center" wrap="nowrap">
-              <Image
-                src="https://gfa.aero/theme_golden_aviation/static/src/image%203.0/logo.svg"
-                alt="GFA Logo"
-                width={110}
-                height={45}
-                priority
-              />
+              {/* LOGO */}
+              <Link href="/">
+                <Image
+                  src="https://gfa.aero/theme_golden_aviation/static/src/image%203.0/logo.svg"
+                  alt="GFA Logo"
+                  width={110}
+                  height={45}
+                  priority
+                />
+              </Link>
 
               {/* DESKTOP MENU */}
               <Group
@@ -102,14 +104,22 @@ export default function Navbar() {
                 align="center"
                 wrap="nowrap"
               >
-                <Link href="/whoweare" className="no-underline">
+                {/* WHO WE ARE */}
+                <Link
+                  href="/whoweare"
+                  className="no-underline"
+                >
                   <Text fw={500} size="sm">
                     Who We Are
                   </Text>
                 </Link>
 
                 {/* SERVICES */}
-                <Menu trigger="hover" shadow="md" width={220}>
+                <Menu
+                  trigger="hover"
+                  shadow="md"
+                  width={230}
+                >
                   <Menu.Target>
                     <Group
                       gap={4}
@@ -118,6 +128,7 @@ export default function Navbar() {
                       <Text fw={500} size="sm">
                         Services
                       </Text>
+
                       <IconChevronDown size={15} />
                     </Group>
                   </Menu.Target>
@@ -135,18 +146,32 @@ export default function Navbar() {
                   </Menu.Dropdown>
                 </Menu>
 
-                <Link href="/quality" className="no-underline">
+                {/* QUALITY */}
+                <Link
+                  href="/more/quality"
+                  className="no-underline"
+                >
                   <Text fw={500} size="sm">
                     Quality
                   </Text>
                 </Link>
 
-                <Link href="/events" className="no-underline">
-                  <Text size="sm">Events</Text>
+                {/* EVENTS */}
+                <Link
+                  href="/events"
+                  className="no-underline"
+                >
+                  <Text size="sm">
+                    Events
+                  </Text>
                 </Link>
 
                 {/* MORE */}
-                <Menu trigger="hover" shadow="md" width={180}>
+                <Menu
+                  trigger="hover"
+                  shadow="md"
+                  width={190}
+                >
                   <Menu.Target>
                     <Group
                       gap={4}
@@ -156,6 +181,7 @@ export default function Navbar() {
                         size={14}
                         color="#0B7A3E"
                       />
+
                       <Text fw={500} size="sm">
                         More
                       </Text>
@@ -184,6 +210,7 @@ export default function Navbar() {
               align="center"
               wrap="nowrap"
             >
+              {/* LINKEDIN */}
               <ActionIcon
                 color="green"
                 variant="filled"
@@ -194,6 +221,7 @@ export default function Navbar() {
                 <IconBrandLinkedin size={16} />
               </ActionIcon>
 
+              {/* PHONE */}
               <ActionIcon
                 color="green"
                 variant="filled"
@@ -204,11 +232,12 @@ export default function Navbar() {
                 <IconPhone size={16} />
               </ActionIcon>
 
+              {/* AOG DESK */}
               <Text
                 fw={500}
                 size="sm"
                 component={Link}
-                href="/aog-desk"
+                href="/services/aog-desk"
                 className="no-underline"
               >
                 AOG Desk
@@ -263,6 +292,7 @@ export default function Navbar() {
               hiddenFrom="md"
               variant="subtle"
               onClick={() => setOpened(true)}
+              aria-label="Open menu"
             >
               <Text size="xl">☰</Text>
             </ActionIcon>
@@ -278,7 +308,23 @@ export default function Navbar() {
         padding="md"
       >
         <Stack gap="md">
-          {mobileItems.map(([label, href]) => (
+          {/* WHO WE ARE */}
+          <Text
+            component={Link}
+            href="/whoweare"
+            fw={600}
+            size="md"
+            style={{
+              textDecoration: "none",
+              color: "#0B7A3E",
+            }}
+            onClick={() => setOpened(false)}
+          >
+            Who We Are
+          </Text>
+
+          {/* SERVICES */}
+          {services.map(([name, href]) => (
             <Text
               key={href}
               component={Link}
@@ -288,15 +334,81 @@ export default function Navbar() {
               style={{
                 textDecoration: "none",
                 color: "#0B7A3E",
-                display: "block",
               }}
               onClick={() => setOpened(false)}
             >
-              {label}
+              {name}
             </Text>
           ))}
 
-          <Text c="dimmed" size="sm" mt="xl">
+          {/* QUALITY */}
+          <Text
+            component={Link}
+            href="/quality"
+            fw={600}
+            size="md"
+            style={{
+              textDecoration: "none",
+              color: "#0B7A3E",
+            }}
+            onClick={() => setOpened(false)}
+          >
+            Quality
+          </Text>
+
+          {/* EVENTS */}
+          <Text
+            component={Link}
+            href="/events"
+            fw={600}
+            size="md"
+            style={{
+              textDecoration: "none",
+              color: "#0B7A3E",
+            }}
+            onClick={() => setOpened(false)}
+          >
+            Events
+          </Text>
+
+          {/* MORE ITEMS */}
+          {moreItems.map(([name, href]) => (
+            <Text
+              key={href}
+              component={Link}
+              href={href}
+              fw={600}
+              size="md"
+              style={{
+                textDecoration: "none",
+                color: "#0B7A3E",
+              }}
+              onClick={() => setOpened(false)}
+            >
+              {name}
+            </Text>
+          ))}
+
+          {/* CART */}
+          <Text
+            component={Link}
+            href="/cart"
+            fw={600}
+            size="md"
+            style={{
+              textDecoration: "none",
+              color: "#0B7A3E",
+            }}
+            onClick={() => setOpened(false)}
+          >
+            Cart {cartCount > 0 && `(${cartCount})`}
+          </Text>
+
+          <Text
+            c="dimmed"
+            size="sm"
+            mt="xl"
+          >
             Quick access to parts, services, quality, and support.
           </Text>
         </Stack>
@@ -350,7 +462,10 @@ export default function Navbar() {
             </Anchor>
           </Group>
 
-          <Button fullWidth color="green">
+          <Button
+            fullWidth
+            color="green"
+          >
             Sign In
           </Button>
         </Stack>
